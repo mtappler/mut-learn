@@ -69,16 +69,16 @@ public class EvaluateEmqttSingleClient {
 		RandomCovSelEquivConfiguration<MutationTestCase> mutChangeTargetConfig = config.mutChangeTargetConfig;
 		configs.add((RandomCovSelEquivConfiguration<T>) mutChangeTargetConfig);
 
-		RandomCovSelEquivConfiguration<SimpleTestCase> ly = new RandomCovSelEquivConfiguration<SimpleTestCase>(
-				Collections.emptyList(), 
-				upperNrTests, 
-				false, 
-				new RandomSelector(0),
-				new AdaptedLeeYannakakisGenerator("src/main/resources/lee_yannakakis", 
-						"minimal", 2, config.sul.getAlphabet()),
-				new IdentitySampler());
-		configs.add((RandomCovSelEquivConfiguration<T>) ly);
-		ly.nameSuffix = "_ly";
+//		RandomCovSelEquivConfiguration<SimpleTestCase> ly = new RandomCovSelEquivConfiguration<SimpleTestCase>(
+//				Collections.emptyList(), 
+//				upperNrTests, 
+//				false, 
+//				new RandomSelector(0),
+//				new AdaptedLeeYannakakisGenerator("src/main/resources/lee_yannakakis", 
+//						"minimal", 2, config.sul.getAlphabet()),
+//				new IdentitySampler());
+//		configs.add((RandomCovSelEquivConfiguration<T>) ly);
+//		ly.nameSuffix = "_ly";
 		
 		RandomCovSelEquivConfiguration<MutationTestCase> mutChangeOutputConfigMuDirected = 
 				new RandomCovSelEquivConfiguration<>(Collections.singletonList(

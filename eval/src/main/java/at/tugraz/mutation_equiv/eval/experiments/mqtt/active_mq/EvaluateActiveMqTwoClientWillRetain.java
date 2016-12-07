@@ -53,16 +53,16 @@ public class EvaluateActiveMqTwoClientWillRetain {
 		config.randomConfig.traceGen = new RandomWordGenerator(config.sul.getAlphabet(), new Random(), 50);
 		configs.add((RandomCovSelEquivConfiguration<T>) config.randomConfig);
 		
-		RandomCovSelEquivConfiguration<SimpleTestCase> ly = new RandomCovSelEquivConfiguration<SimpleTestCase>(
-				Collections.emptyList(), 
-				upperNrTests, 
-				false, 
-				new RandomSelector(0),
-				new AdaptedLeeYannakakisGenerator("src/main/resources/lee_yannakakis", 
-						"minimal", 3, config.sul.getAlphabet()),
-				new IdentitySampler());
-		configs.add((RandomCovSelEquivConfiguration<T>) ly);
-		ly.nameSuffix = "_ly";
+//		RandomCovSelEquivConfiguration<SimpleTestCase> ly = new RandomCovSelEquivConfiguration<SimpleTestCase>(
+//				Collections.emptyList(), 
+//				upperNrTests, 
+//				false, 
+//				new RandomSelector(0),
+//				new AdaptedLeeYannakakisGenerator("src/main/resources/lee_yannakakis", 
+//						"minimal", 3, config.sul.getAlphabet()),
+//				new IdentitySampler());
+//		configs.add((RandomCovSelEquivConfiguration<T>) ly);
+//		ly.nameSuffix = "_ly";
 		
 		List<MutationOperator> ops = new ArrayList<>();
 		SplitStateOperator splitOp = new SplitStateOperator(config.sul.getAlphabet(),2);

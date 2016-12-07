@@ -88,16 +88,16 @@ public class EvaluateEmqttTwoClientWillRetain {
 						);
 		mutSplit1OutGenMuDirectedConfig.keepExecutedTests = true;
 		configs.add((RandomCovSelEquivConfiguration<T>) mutSplit1OutGenMuDirectedConfig);
-		RandomCovSelEquivConfiguration<SimpleTestCase> ly = new RandomCovSelEquivConfiguration<SimpleTestCase>(
-				Collections.emptyList(), 
-				upperNrTests, 
-				false, 
-				new RandomSelector(0),
-				new AdaptedLeeYannakakisGenerator("src/main/resources/lee_yannakakis", 
-						"minimal", 3, config.sul.getAlphabet()),
-				new IdentitySampler());
-		configs.add((RandomCovSelEquivConfiguration<T>) ly);
-		ly.nameSuffix = "_ly";
+//		RandomCovSelEquivConfiguration<SimpleTestCase> ly = new RandomCovSelEquivConfiguration<SimpleTestCase>(
+//				Collections.emptyList(), 
+//				upperNrTests, 
+//				false, 
+//				new RandomSelector(0),
+//				new AdaptedLeeYannakakisGenerator("src/main/resources/lee_yannakakis", 
+//						"minimal", 3, config.sul.getAlphabet()),
+//				new IdentitySampler());
+//		configs.add((RandomCovSelEquivConfiguration<T>) ly);
+//		ly.nameSuffix = "_ly";
 		return configs;
 	}
 	private static int upperNrTests = 2000;

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>sip.dom3</experimentName>
+    <generationDuration>677</generationDuration>
+    <generationDurations>677</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>0</mutationDuration>
+    <mutationDurations>0</mutationDurations>
+    <nrCorrectRuns>0</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>69</resetsEq>
+    <resetsEqSum>69</resetsEqSum>
+    <resetsMq>4492</resetsMq>
+    <resetsMqSum>4492</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>10</selectionDuration>
+    <selectionDurations>10</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>530</stepsEq>
+    <stepsEqSum>530</stepsEqSum>
+    <stepsMq>26427</stepsMq>
+    <stepsMqSum>26427</stepsMqSum>
+    <testSelectionSuite>4000</testSelectionSuite>
+    <testSuiteSize>50</testSuiteSize>
+    <traceGenConfig>adapted-lee-yannakakis(exp-len=2,prefix-strategy=minimal)</traceGenConfig>
+</eval-statistics>

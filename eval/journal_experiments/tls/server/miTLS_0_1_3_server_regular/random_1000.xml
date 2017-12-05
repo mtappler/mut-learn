@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.miTLS_0_1_3_server_regular</experimentName>
+    <generationDuration>501</generationDuration>
+    <generationDurations>134,134,134,99</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>0</mutationDuration>
+    <mutationDurations>0,0,0,0</mutationDurations>
+    <nrCorrectRuns>3</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>1664,1440,1759,1026</resetsEq>
+    <resetsEqSum>5889</resetsEqSum>
+    <resetsMq>198,198,199,101</resetsMq>
+    <resetsMqSum>696</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>51</selectionDuration>
+    <selectionDurations>14,12,14,11</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>32806,28722,35106,20826</stepsEq>
+    <stepsEqSum>117460</stepsEqSum>
+    <stepsMq>697,695,697,262</stepsMq>
+    <stepsMqSum>2351</stepsMqSum>
+    <testSelectionSuite>100000</testSelectionSuite>
+    <testSuiteSize>1000</testSuiteSize>
+    <traceGenConfig>rand-word(len=40)</traceGenConfig>
+</eval-statistics>

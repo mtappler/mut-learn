@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.GnuTLS_3_3_12_server_full</experimentName>
+    <generationDuration>4187</generationDuration>
+    <generationDurations>267,187,182,230,149,156,192,194,190,164,150,231,218,193,151,234,179,191,173,216,147,193</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>1</mutationDuration>
+    <mutationDurations>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1</mutationDurations>
+    <nrCorrectRuns>21</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>5628,5114,5267,5202,5000,4966,5185,4929,6820,4920,4982,9802,5288,9183,4912,6964,5227,5139,5211,5456,4935,5645</resetsEq>
+    <resetsEqSum>125775</resetsEqSum>
+    <resetsMq>773,549,550,662,438,438,548,549,551,440,439,661,659,552,438,660,549,550,548,659,438,489</resetsMq>
+    <resetsMqSum>12140</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>25</selectionDuration>
+    <selectionDurations>1,2,1,1,1,0,2,1,1,1,1,0,1,2,0,0,1,1,2,4,2,0</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>33644,30574,31035,30816,29982,29818,31246,29588,40702,29744,29770,59510,31473,55124,29759,41825,30973,30703,30420,32590,29677,32935</stepsEq>
+    <stepsEqSum>751908</stepsEqSum>
+    <stepsMq>3172,2175,2290,2620,1739,1738,2174,2290,2295,1745,1853,2620,2721,2409,1738,2837,2287,2180,2282,2611,1738,1834</stepsMq>
+    <stepsMqSum>49348</stepsMqSum>
+    <testSelectionSuite>5000</testSelectionSuite>
+    <testSuiteSize>4900</testSuiteSize>
+    <traceGenConfig>adapted-lee-yannakakis(exp-len=3,prefix-strategy=minimal)</traceGenConfig>
+</eval-statistics>

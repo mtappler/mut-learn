@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>mqtt.emqtt.two_client_will_retain</experimentName>
+    <generationDuration>21801</generationDuration>
+    <generationDurations>3942,3257,3656,4097,4133,2716</generationDurations>
+    <mutOpConfig>split-state(acc-seq=300, depth=1, diff-last=true, allow-equal-pre=true)_change-output</mutOpConfig>
+    <mutationDuration>973</mutationDuration>
+    <mutationDurations>196,141,166,173,190,107</mutationDurations>
+    <nrCorrectRuns>5</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>234,127,142,140,103,153</resetsEq>
+    <resetsEqSum>899</resetsEqSum>
+    <resetsMq>1837,1500,1336,1662,1668,1101</resetsMq>
+    <resetsMqSum>9104</resetsMqSum>
+    <sampleConfig>reduce-to-min(kind=split-state-state)*element-based(fraction=1/(2^1.000000),kind=operator:split-state-1)</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>138433</selectionDuration>
+    <selectionDurations>23772,22561,22425,26896,25474,17305</selectionDurations>
+    <shortMutOpConfig>split-state_1_change-output</shortMutOpConfig>
+    <stepsEq>10105,5434,6155,5906,4359,6572</stepsEq>
+    <stepsEqSum>38531</stepsEqSum>
+    <stepsMq>15307,13355,10234,14375,12838,8415</stepsMq>
+    <stepsMqSum>74524</stepsMqSum>
+    <testSelectionSuite>50000</testSelectionSuite>
+    <testSuiteSize>75</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:40, restart-prob:0.950000, stop-prob:0.050000, rand-word:6)</traceGenConfig>
+</eval-statistics>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.OpenSSL_1_0_1j_server_regular</experimentName>
+    <generationDuration>1113</generationDuration>
+    <generationDurations>292,169,218,244,190</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>0</mutationDuration>
+    <mutationDurations>0,0,0,0,0</mutationDurations>
+    <nrCorrectRuns>4</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>6127,6753,5289,5134,4138</resetsEq>
+    <resetsEqSum>27441</resetsEqSum>
+    <resetsMq>633,395,472,553,390</resetsMq>
+    <resetsMqSum>2443</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>8</selectionDuration>
+    <selectionDurations>1,1,1,3,2</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>39756,43952,34320,33560,26054</stepsEq>
+    <stepsEqSum>177642</stepsEqSum>
+    <stepsMq>2882,1779,2033,2458,1509</stepsMq>
+    <stepsMqSum>10661</stepsMqSum>
+    <testSelectionSuite>5000</testSelectionSuite>
+    <testSuiteSize>4000</testSuiteSize>
+    <traceGenConfig>adapted-lee-yannakakis(exp-len=3,prefix-strategy=minimal)</traceGenConfig>
+</eval-statistics>

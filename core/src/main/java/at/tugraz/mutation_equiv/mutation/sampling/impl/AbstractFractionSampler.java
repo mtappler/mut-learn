@@ -35,6 +35,10 @@ import at.tugraz.mutation_equiv.mutation.sampling.MutantSamplingStrategy;
  *
  */
 public abstract class AbstractFractionSampler implements MutantSamplingStrategy {
+	@Override
+	public void updateSeed(long seed) {
+		randGen = new Random(seed);
+	}
 	protected double powerOfOneHalf = 1;
 	protected Random randGen = null;
 	public AbstractFractionSampler(double powerOfOneHalf, Random randGen) {

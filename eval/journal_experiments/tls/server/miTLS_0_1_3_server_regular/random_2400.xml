@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.miTLS_0_1_3_server_regular</experimentName>
+    <generationDuration>2654</generationDuration>
+    <generationDurations>151,141,143,139,136,150,140,138,138,148,138,139,154,170,187,163,143,136</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>0</mutationDuration>
+    <mutationDurations>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</mutationDurations>
+    <nrCorrectRuns>17</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>3064,2840,3159,3448,2454,2630,3536,3227,4018,2931,3388,4631,2489,4351,2713,2717,2837,3659</resetsEq>
+    <resetsEqSum>58092</resetsEqSum>
+    <resetsMq>198,198,199,199,199,198,199,199,198,198,199,198,198,198,198,198,198,167</resetsMq>
+    <resetsMqSum>3539</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>278</selectionDuration>
+    <selectionDurations>15,13,13,13,15,16,14,15,13,25,14,15,15,14,25,15,14,14</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>61347,57132,63930,69010,49377,52946,70052,64342,79635,58182,67417,92000,51169,88307,55217,54356,57328,73497</stepsEq>
+    <stepsEqSum>1165244</stepsEqSum>
+    <stepsMq>697,695,697,696,697,695,697,698,694,694,696,697,695,694,695,694,694,512</stepsMq>
+    <stepsMqSum>12337</stepsMqSum>
+    <testSelectionSuite>100000</testSelectionSuite>
+    <testSuiteSize>2400</testSuiteSize>
+    <traceGenConfig>rand-word(len=40)</traceGenConfig>
+</eval-statistics>

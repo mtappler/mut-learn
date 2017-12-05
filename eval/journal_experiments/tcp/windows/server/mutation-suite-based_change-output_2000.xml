@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tcp.windows.server</experimentName>
+    <generationDuration>248366</generationDuration>
+    <generationDurations>20720,21855,19670,18621,21460,22664,25292,15978,18451,21872,20457,21326</generationDurations>
+    <mutOpConfig>change-output</mutOpConfig>
+    <mutationDuration>27</mutationDuration>
+    <mutationDurations>0,3,2,1,1,5,4,1,3,0,4,3</mutationDurations>
+    <nrCorrectRuns>11</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>2535,2159,2631,2046,2058,2595,2115,2223,2717,2575,2055,2213</resetsEq>
+    <resetsEqSum>27922</resetsEqSum>
+    <resetsMq>6486,6482,5988,5490,5986,6985,7489,4987,5989,6490,5992,6316</resetsMq>
+    <resetsMqSum>74680</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>62239</selectionDuration>
+    <selectionDurations>5172,5843,4803,4462,5977,5408,5860,3890,4635,5296,5126,5767</selectionDurations>
+    <shortMutOpConfig>change-output</shortMutOpConfig>
+    <stepsEq>153085,128610,158490,124826,125028,152090,126678,131236,161943,153254,124508,121090</stepsEq>
+    <stepsEqSum>1660838</stepsEqSum>
+    <stepsMq>59001,66920,66219,58398,61905,69000,71898,53911,64315,74696,63625,57764</stepsMq>
+    <stepsMqSum>767652</stepsMqSum>
+    <testSelectionSuite>200000</testSelectionSuite>
+    <testSuiteSize>2000</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:60, restart-prob:0.950000, stop-prob:0.050000, rand-word:6)</traceGenConfig>
+</eval-statistics>

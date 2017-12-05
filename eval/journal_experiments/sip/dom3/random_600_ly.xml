@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>sip.dom3</experimentName>
+    <generationDuration>6013</generationDuration>
+    <generationDurations>286,235,239,268,215,259,247,235,188,168,277,288,187,200,220,222,240,175,215,267,259,219,248,193,260,203</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>4</mutationDuration>
+    <mutationDurations>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,1,0,1</mutationDurations>
+    <nrCorrectRuns>25</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>741,753,644,1082,710,677,756,678,668,608,678,1250,666,701,650,677,685,646,632,672,1251,669,689,627,659,634</resetsEq>
+    <resetsEqSum>19103</resetsEqSum>
+    <resetsMq>6528,5218,5220,5872,5221,5872,5873,5873,4568,3915,6525,6526,4569,4568,5223,5220,5874,3916,4564,5870,5869,5219,5872,4567,5872,4294</resetsMq>
+    <resetsMqSum>138708</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>35</selectionDuration>
+    <selectionDurations>1,3,1,1,2,3,2,1,1,2,0,1,0,1,2,1,1,2,1,0,0,2,3,0,2,2</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>6462,6107,5458,8591,5992,5767,6213,5755,5246,5241,5641,10302,5378,5711,5635,5730,5651,5433,5229,5698,10524,5624,5607,5273,5458,5280</stepsEq>
+    <stepsEqSum>159006</stepsEqSum>
+    <stepsMq>45399,31327,28074,34104,37885,37370,32166,39998,26611,27099,37550,38193,25974,30531,38555,28727,39993,28408,22025,31490,28224,31338,36064,28560,37379,24188</stepsMq>
+    <stepsMqSum>847232</stepsMqSum>
+    <testSelectionSuite>4000</testSelectionSuite>
+    <testSuiteSize>600</testSuiteSize>
+    <traceGenConfig>adapted-lee-yannakakis(exp-len=2,prefix-strategy=minimal)</traceGenConfig>
+</eval-statistics>

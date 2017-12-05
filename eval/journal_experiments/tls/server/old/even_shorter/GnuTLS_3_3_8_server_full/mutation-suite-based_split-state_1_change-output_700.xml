@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.even_shorter.GnuTLS_3_3_8_server_full</experimentName>
+    <generationDuration>113697</generationDuration>
+    <generationDurations>7242,6981,7008,5447,6187,6443,6889,7698,8368,6975,7206,7325,7728,7243,7002,7955</generationDurations>
+    <mutOpConfig>split-state(acc-seq=300, depth=1, diff-last=true, allow-equal-pre=true)_change-output</mutOpConfig>
+    <mutationDuration>875</mutationDuration>
+    <mutationDurations>60,50,62,40,49,42,48,56,75,52,53,55,60,54,60,59</mutationDurations>
+    <nrCorrectRuns>15</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>728,847,819,757,756,731,1014,788,781,770,827,1043,1067,856,763,749</resetsEq>
+    <resetsEqSum>13296</resetsEqSum>
+    <resetsMq>1789,1788,1789,1428,1610,1610,1786,1968,1793,1790,1787,1786,1971,1787,1790,1848</resetsMq>
+    <resetsMqSum>28320</resetsMqSum>
+    <sampleConfig>reduce-to-mean(kind=split-state-state)*element-based(fraction=1/(2^1.000000),kind=operator:split-state-1)</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>271285</selectionDuration>
+    <selectionDurations>17326,16491,15716,14511,16762,15560,17265,17815,20212,17120,17100,17122,16371,16571,18060,17283</selectionDurations>
+    <shortMutOpConfig>split-state_1_change-output</shortMutOpConfig>
+    <stepsEq>6340,7569,7253,6632,6605,6406,9087,6896,6973,6851,7344,9298,9720,7690,6665,6623</stepsEq>
+    <stepsEqSum>117952</stepsEqSum>
+    <stepsMq>8898,9071,9430,7459,8645,7923,9952,9706,10344,8546,9063,9054,9893,8886,8900,9385</stepsMq>
+    <stepsMqSum>145155</stepsMqSum>
+    <testSelectionSuite>300000</testSelectionSuite>
+    <testSuiteSize>700</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:10, restart-prob:0.950000, stop-prob:0.050000, rand-word:3)</traceGenConfig>
+</eval-statistics>

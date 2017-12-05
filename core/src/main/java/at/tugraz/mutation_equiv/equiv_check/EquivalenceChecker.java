@@ -18,7 +18,6 @@
 package at.tugraz.mutation_equiv.equiv_check;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -28,9 +27,14 @@ import java.util.Optional;
 import java.util.Set;
 
 import org.apache.commons.lang3.tuple.ImmutablePair;
+import org.apache.commons.lang3.tuple.ImmutableTriple;
 import org.apache.commons.lang3.tuple.Pair;
+import org.apache.commons.lang3.tuple.Triple;
 
 import at.tugraz.mutation_equiv.mutation.sampling.MutantProducer;
+import at.tugraz.mutation_equiv.util.Cons;
+import at.tugraz.mutation_equiv.util.Nil;
+import at.tugraz.mutation_equiv.util.Trace;
 import net.automatalib.automata.transout.MealyMachine;
 import net.automatalib.words.Alphabet;
 import net.automatalib.words.impl.Symbol;
@@ -52,62 +56,10 @@ import net.automatalib.words.impl.Symbol;
  */
 public class EquivalenceChecker {
 
-	/**
-	 * A simple sequence type providing Nil and Cons to save 
-	 * memory in precomputation.
-	 * 
-	 * @author Martin Tappler
-	 *
-	 */
-	public static interface Trace{
-		List<Symbol> toList();
-		List<Symbol> toList(List<Symbol> prefix);
-		static Trace fromList(List<Symbol> trace){
-			Trace result = new Nil();
-			for(Symbol s : trace){
-				result = new Cons(s,result);
-			}
-			return result;
-		}
-	}
-	public static class Cons implements Trace{
-		public Cons(Symbol v, Trace tail) {
-			super();
-			this.v = v;
-			this.tail = tail;
-		}
-		Symbol v;
-		Trace tail;
-		@Override
-		public List<Symbol> toList() {
-			List<Symbol> prefix = new ArrayList<>();
-			prefix.add(v);
-			return tail.toList(prefix);
-		}
-		@Override
-		public List<Symbol> toList(List<Symbol> prefix) {
-			prefix.add(v);
-			return tail.toList(prefix);
-		}
-	}
-	public static class Nil implements Trace{
-
-		@Override
-		public List<Symbol> toList() {
-			return new ArrayList<>();
-		}
-
-		@Override
-		public List<Symbol> toList(List<Symbol> prefix) {
-			Collections.reverse(prefix);
-			return prefix;
-		}
-		
-	}
 	private Alphabet<Symbol> inputAlphabet = null;
 	private boolean precompute = false;
 	private Object hypoReference = null;
-	private Map<Object,Map<Object,Trace>> precompTraces = new HashMap<>();
+	private Map<Object,Map<Object,Trace<Symbol>>> precompTraces = new HashMap<>();
 
 	public EquivalenceChecker(Alphabet<Symbol> inputAlphabet, boolean precompute) {
 		super();
@@ -119,28 +71,29 @@ public class EquivalenceChecker {
 	}
 	
 	public void precomputeTraces(MealyMachine<Object,Symbol,?,String> machine){
-		Map<Object,Map<Object,Trace>> precomputedTraces = new HashMap<>();
+		Map<Object,Map<Object,Trace<Symbol>>> precomputedTraces = new HashMap<>();
 		for(Object s : machine.getStates())
 			precomputedTraces.put(s, precomputeTraces(machine,s));
 		precompTraces = precomputedTraces;
 	}
 
-	private Map<Object, Trace> precomputeTraces(MealyMachine<Object, Symbol, ?, String> machine, Object startState) {
+	private Map<Object, Trace<Symbol>> precomputeTraces(MealyMachine<Object, Symbol, ?, String> machine, Object startState) {
 		Set<Object> visited = new HashSet<>();
-		Map<Object,Trace> tracesFromStart = new HashMap<>();
-		LinkedList<Pair<Object,Trace>> schedule = new LinkedList<>();
-		schedule.add(new ImmutablePair<Object, EquivalenceChecker.Trace>(startState, new Nil()));
+		Map<Object,Trace<Symbol>> tracesFromStart = new HashMap<>();
+		LinkedList<Pair<Object,Trace<Symbol>>> schedule = new LinkedList<>();
+		schedule.add(new ImmutablePair<Object, Trace<Symbol>>(startState, 
+				new Nil<Symbol>()));
 		while(!schedule.isEmpty()){
-			Pair<Object, Trace> current = schedule.remove();
+			Pair<Object, Trace<Symbol>> current = schedule.remove();
 			Object currentState = current.getLeft();
-			Trace currentTrace = current.getRight();
+			Trace<Symbol> currentTrace = current.getRight();
 			if(!tracesFromStart.containsKey(currentState))
 				tracesFromStart.put(currentState, currentTrace);
 			if(!visited.contains(currentState)){
 				visited.add(currentState);
 				for (Symbol input : inputAlphabet){				
 					Object nextState = machine.getSuccessor(currentState, input);
-					Trace traceToNext = new Cons(input,currentTrace);
+					Trace<Symbol> traceToNext = new Cons<Symbol>(input,currentTrace);
 					
 					schedule.add(new ImmutablePair<>(nextState, traceToNext));
 				}
@@ -155,15 +108,15 @@ public class EquivalenceChecker {
 			precomputeTraces(hypothesis);
 			hypoReference = hypothesis;
 		}
-		// this if works in the current implementation, but causes large speed-up so it is used
+		// this works in the current implementation and causes large speed-up so it is used
 		// change output are the only mutants with getCritTrans().isDefinitelyKilled() == true
 		// for these it suffices to find a transition from the current state to the prestate (and if there is none
 		// then the mutant can't be killed)
 		// for split state mutants, however, this would not work, as they may be killed even if the
 		// pre state of the critical transition is not reachable
 		if(precompute && mutant.getCritTrans().isDefinitelyKilled()){
-			Map<Object,Trace> traceFromInit = precompTraces.get(hypothesis.getState(initialTrace));
-			Trace traceToPreCritical = traceFromInit.get(mutant.getCritTrans().getPreState());
+			Map<Object,Trace<Symbol>> traceFromInit = precompTraces.get(hypothesis.getState(initialTrace));
+			Trace<Symbol> traceToPreCritical = traceFromInit.get(mutant.getCritTrans().getPreState());
 			if(traceToPreCritical != null)
 				initialTrace.addAll(traceToPreCritical.toList());
 			else	
@@ -188,23 +141,24 @@ public class EquivalenceChecker {
 			List<Symbol> initialTrace, Object criticalTrans) {
 		Object state = hypothesis.getSuccessor(hypothesis.getInitialState(), initialTrace);
 		Set<Object> visited = new HashSet<>();
-		LinkedList<Pair<Object,Trace>> schedule = new LinkedList<>();
-		schedule.add(new ImmutablePair<Object, EquivalenceChecker.Trace>(state, Trace.fromList(initialTrace)));
+		LinkedList<Pair<Object,Trace<Symbol>>> schedule = new LinkedList<>();
+		schedule.add(new ImmutablePair<Object, Trace<Symbol>>(state, 
+				Trace.fromList(initialTrace)));
 		while(!schedule.isEmpty()){
-			Pair<Object, Trace> current = schedule.remove();
+			Pair<Object, Trace<Symbol>> current = schedule.remove();
 			Object currentState = current.getLeft();
-			Trace currentTrace = current.getRight();
+			Trace<Symbol> currentTrace = current.getRight();
 			if(!visited.contains(currentState)){
 				visited.add(currentState);
 				for (Symbol input : inputAlphabet){
 					Object currTrans = hypothesis.getTransition(currentState, input);
 					if(currTrans.equals(criticalTrans)){
-						Trace finalTrace = new Cons(input,currentTrace);
+						Trace<Symbol> finalTrace = new Cons<Symbol>(input,currentTrace);
 						return Optional.of(finalTrace.toList());
 					}
 					else {
 						Object nextState = hypothesis.getSuccessor(currentState, input);
-						Trace traceToNext = new Cons(input,currentTrace);
+						Trace<Symbol> traceToNext = new Cons<Symbol>(input,currentTrace);
 						schedule.add(new ImmutablePair<>(nextState, traceToNext));
 					} 
 				}
@@ -219,18 +173,19 @@ public class EquivalenceChecker {
 		Object hypState = hypothesis.getSuccessor(hypothesis.getInitialState(), initialTrace);
 		Pair<Object,Object> initState = new ImmutablePair<Object, Object>(mutantState,hypState);
 		Set<Pair<Object,Object>> visitedStates = new HashSet<>();
-		LinkedList<Pair<Pair<Object,Object>, Trace>> schedule = new LinkedList<>();
+		LinkedList<Pair<Pair<Object,Object>, Trace<Symbol>>> schedule = new LinkedList<>();
 		schedule.add(new ImmutablePair<>(initState, Trace.fromList(initialTrace)));
 		return killMutant(mutant,hypothesis,schedule,visitedStates);
 	}
 	private Optional<List<Symbol>> killMutant(MealyMachine<Object, Symbol, ?, String> mutant,
-			MealyMachine<Object, Symbol, ?, String> hypothesis, LinkedList<Pair<Pair<Object,Object>, Trace>> schedule,
+			MealyMachine<Object, Symbol, ?, String> hypothesis, LinkedList<Pair<Pair<Object,Object>, 
+			Trace<Symbol>>> schedule,
 			Set<Pair<Object, Object>> visitedStates) {
 		// a simple parallel breadth-first exploration of both Mealy machines
 		while(!schedule.isEmpty()){
-			Pair<Pair<Object, Object>, Trace> current = schedule.remove();
+			Pair<Pair<Object, Object>, Trace<Symbol>> current = schedule.remove();
 			Pair<Object, Object> currentState = current.getLeft();
-			Trace currentTrace = current.getRight();
+			Trace<Symbol> currentTrace = current.getRight();
 			if(!visitedStates.contains(currentState)){
 				visitedStates.add(currentState);
 				for (Symbol input : inputAlphabet){
@@ -240,17 +195,77 @@ public class EquivalenceChecker {
 						Pair<Object,Object> nextState = new ImmutablePair<Object, Object>(
 								mutant.getSuccessor(currentState.getLeft(), input), 
 								hypothesis.getSuccessor(currentState.getRight(), input));
-						Trace traceToNext = new Cons(input,currentTrace);
+						Trace<Symbol> traceToNext = new Cons<Symbol>(input,currentTrace);
 						
 						schedule.add(new ImmutablePair<>(nextState, traceToNext));
 					} else {
-						Trace finalTrace = new Cons(input,currentTrace);
+						Trace<Symbol> finalTrace = new Cons<Symbol>(input,currentTrace);
 						return Optional.of(finalTrace.toList());
 					}
 				}
 			}
 		}
 		return Optional.empty();
+	}
+	
+	public List<List<Triple<String,String,String>>> allNonConformingTraces(
+			MealyMachine<Object, Symbol, ?, String> sut,
+			MealyMachine<Object, Symbol, ?, String> reference,
+			Alphabet<Symbol> sutAlphabet, // need alphabets of both machines as some alphabet implementations like
+			Alphabet<Symbol> referenceAlphabet){
+		List<String> stringAlphabet = getStringAlphabet(referenceAlphabet);
+		List<List<Triple<String,String,String>>> result = new ArrayList<>();
+		Object sutState = sut.getInitialState();
+		Object referenceState = reference.getInitialState();
+		Set<Pair<Object,Object>> visitedStates = new HashSet<>();
+		
+		Pair<Object,Object> initState = new ImmutablePair<Object, Object>(sutState,referenceState);
+		LinkedList<Pair<Pair<Object,Object>, Trace<Triple<String,String,String>>>> schedule = new LinkedList<>();
+		schedule.add(new ImmutablePair<Pair<Object,Object>, Trace<Triple<String,String,String>>>
+					(initState, new Nil<Triple<String,String,String>>()));
+		
+		
+		while(!schedule.isEmpty()){
+			Pair<Pair<Object, Object>, Trace<Triple<String,String,String>>> current = schedule.remove();
+			Pair<Object, Object> currentState = current.getLeft();
+			Trace<Triple<String,String,String>> currentTrace = current.getRight();
+			if(!visitedStates.contains(currentState)){
+				visitedStates.add(currentState);
+				for (String input : stringAlphabet){
+					String outSut = sut.getOutput(currentState.getLeft(),
+							symbolForString(sutAlphabet,input));
+					String outRef = reference.getOutput(currentState.getRight(),
+							symbolForString(referenceAlphabet,input));
+					Triple<String,String,String> traceElem = 
+							new ImmutableTriple<String, String, String>(input, outSut, outRef);
+					if(outSut.equals(outRef)){
+						Pair<Object,Object> nextState = new ImmutablePair<Object, Object>(
+								sut.getSuccessor(currentState.getLeft(), 
+										symbolForString(sutAlphabet,input)), 
+								reference.getSuccessor(currentState.getRight(), 
+										symbolForString(referenceAlphabet,input)));
+						Trace<Triple<String,String,String>> traceToNext = new Cons<>(traceElem,currentTrace);
+						schedule.add(new ImmutablePair<>(nextState, traceToNext));
+					} else {
+						Trace<Triple<String,String,String>> finalTrace = new Cons<>(traceElem,currentTrace);
+						result.add(finalTrace.toList());
+					}
+				}
+			}
+		}
+		return result;
+	}
+	private Symbol symbolForString(Alphabet<Symbol> alphabet, String input) {
+		for(Symbol s : alphabet)
+			if(s.getUserObject().toString().equals(input))
+				return s;
+		return null;
+	}
+	private List<String> getStringAlphabet(Alphabet<Symbol> referenceAlphabet) {
+		List<String> result = new ArrayList<>(referenceAlphabet.size());
+		for(Symbol s : referenceAlphabet)
+			result.add(s.getUserObject().toString());
+		return result;
 	}
 
 }

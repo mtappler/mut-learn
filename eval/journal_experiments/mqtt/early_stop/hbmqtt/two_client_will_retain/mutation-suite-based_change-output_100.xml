@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>mqtt.hbmqtt.two_client_will_retain</experimentName>
+    <generationDuration>32888</generationDuration>
+    <generationDurations>2362,2267,2946,2408,2223,2178,1876,1849,1910,1889,1600,2143,1899,1575,2169,1594</generationDurations>
+    <mutOpConfig>change-output</mutOpConfig>
+    <mutationDuration>11</mutationDuration>
+    <mutationDurations>1,1,0,0,1,0,0,1,1,1,0,1,1,2,0,1</mutationDurations>
+    <nrCorrectRuns>15</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>190,123,215,129,119,151,120,108,114,105,156,150,115,105,148,116</resetsEq>
+    <resetsEqSum>2164</resetsEqSum>
+    <resetsMq>1100,1100,1417,1103,1104,1100,943,939,941,944,786,1098,939,786,1100,739</resetsMq>
+    <resetsMqSum>16139</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>13114</selectionDuration>
+    <selectionDurations>1000,905,1305,1002,819,851,751,756,743,742,617,844,725,564,897,593</selectionDurations>
+    <shortMutOpConfig>change-output</shortMutOpConfig>
+    <stepsEq>8663,5570,9892,5856,5427,6894,5423,4904,5203,4758,7186,6836,5171,4828,6762,5313</stepsEq>
+    <stepsEqSum>98686</stepsEqSum>
+    <stepsMq>7488,8140,13348,8616,8314,8126,8661,6430,9429,6811,7178,7957,8026,6243,8298,4962</stepsMq>
+    <stepsMqSum>128027</stepsMqSum>
+    <testSelectionSuite>50000</testSelectionSuite>
+    <testSuiteSize>100</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:40, restart-prob:0.950000, stop-prob:0.050000, rand-word:6)</traceGenConfig>
+</eval-statistics>

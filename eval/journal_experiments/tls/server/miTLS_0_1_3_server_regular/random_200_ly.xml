@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.miTLS_0_1_3_server_regular</experimentName>
+    <generationDuration>1390</generationDuration>
+    <generationDurations>155,138,143,136,139,139,142,140,119,139</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>0</mutationDuration>
+    <mutationDurations>0,0,0,0,0,0,0,0,0,0</mutationDurations>
+    <nrCorrectRuns>9</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>346,384,315,332,423,322,359,286,293,316</resetsEq>
+    <resetsEqSum>3376</resetsEqSum>
+    <resetsMq>198,198,198,198,198,199,198,198,148,134</resetsMq>
+    <resetsMqSum>1867</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>6</selectionDuration>
+    <selectionDurations>1,2,0,0,0,0,0,2,0,1</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>1808,1986,1535,1672,2454,1691,1930,1622,1622,1575</stepsEq>
+    <stepsEqSum>17895</stepsEqSum>
+    <stepsMq>695,695,697,695,696,697,697,695,509,358</stepsMq>
+    <stepsMqSum>6434</stepsMqSum>
+    <testSelectionSuite>5000</testSelectionSuite>
+    <testSuiteSize>200</testSuiteSize>
+    <traceGenConfig>adapted-lee-yannakakis(exp-len=3,prefix-strategy=minimal)</traceGenConfig>
+</eval-statistics>

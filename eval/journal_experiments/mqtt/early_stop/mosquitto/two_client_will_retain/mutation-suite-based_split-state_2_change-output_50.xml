@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>mqtt.mosquitto.two_client_will_retain</experimentName>
+    <generationDuration>31468</generationDuration>
+    <generationDurations>4217,4857,4254,4809,3651,4822,4858</generationDurations>
+    <mutOpConfig>split-state(acc-seq=300, depth=2, diff-last=true, allow-equal-pre=true)_change-output</mutOpConfig>
+    <mutationDuration>3495</mutationDuration>
+    <mutationDurations>471,566,521,486,473,519,459</mutationDurations>
+    <nrCorrectRuns>6</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>102,93,96,98,85,80,70</resetsEq>
+    <resetsEqSum>624</resetsEqSum>
+    <resetsMq>1165,1330,1166,1329,996,1334,1264</resetsMq>
+    <resetsMqSum>8584</resetsMqSum>
+    <sampleConfig>reduce-to-min(kind=split-state-state)*element-based(fraction=1/(2^3.000000),kind=operator:split-state-2)</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>512791</selectionDuration>
+    <selectionDurations>67707,83479,77027,73544,64106,77201,69727</selectionDurations>
+    <shortMutOpConfig>split-state_2_change-output</shortMutOpConfig>
+    <stepsEq>4301,3917,4068,4115,3648,3369,2965</stepsEq>
+    <stepsEqSum>26383</stepsEqSum>
+    <stepsMq>9923,10046,9275,10841,7816,9438,10303</stepsMq>
+    <stepsMqSum>67642</stepsMqSum>
+    <testSelectionSuite>100000</testSelectionSuite>
+    <testSuiteSize>50</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:40, restart-prob:0.950000, stop-prob:0.050000, rand-word:6)</traceGenConfig>
+</eval-statistics>

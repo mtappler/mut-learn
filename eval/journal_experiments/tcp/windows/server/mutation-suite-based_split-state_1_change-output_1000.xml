@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tcp.windows.server</experimentName>
+    <generationDuration>560455</generationDuration>
+    <generationDurations>37241,46707,51997,45592,39213,44074,52862,44525,40450,55881,50566,51347</generationDurations>
+    <mutOpConfig>split-state(acc-seq=100, depth=1, diff-last=true, allow-equal-pre=true)_change-output</mutOpConfig>
+    <mutationDuration>74919</mutationDuration>
+    <mutationDurations>5131,5828,5896,6617,4742,5755,8304,6212,5593,8849,6807,5185</mutationDurations>
+    <nrCorrectRuns>11</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>1655,1376,2235,1977,1328,1203,2018,1174,1114,1273,2036,1116</resetsEq>
+    <resetsEqSum>18505</resetsEqSum>
+    <resetsMq>4985,5985,6482,5985,4983,5990,6991,5994,5491,7486,6483,6315</resetsMq>
+    <resetsMqSum>73170</resetsMqSum>
+    <sampleConfig>reduce-to-min(kind=split-state-state)*element-based(fraction=1/(2^1.000000),kind=operator:split-state-1)</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>5558299</selectionDuration>
+    <selectionDurations>345055,394250,425448,504041,364847,438495,540725,436034,575129,567145,509527,457603</selectionDurations>
+    <shortMutOpConfig>split-state_1_change-output</shortMutOpConfig>
+    <stepsEq>65108,56794,86814,81648,55841,49485,77062,47959,46444,52741,77072,41919</stepsEq>
+    <stepsEqSum>738887</stepsEqSum>
+    <stepsMq>52987,57342,60924,61761,50438,65877,64919,61507,60966,82123,66268,65332</stepsMq>
+    <stepsMqSum>750444</stepsMqSum>
+    <testSelectionSuite>200000</testSelectionSuite>
+    <testSuiteSize>1000</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:60, restart-prob:0.950000, stop-prob:0.050000, rand-word:6)</traceGenConfig>
+</eval-statistics>

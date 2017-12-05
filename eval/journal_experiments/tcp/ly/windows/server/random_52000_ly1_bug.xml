@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tcp.ly.windows.server</experimentName>
+    <generationDuration>167374</generationDuration>
+    <generationDurations>5512,5571,7272,5468,5668,4534,6143,5049,6003,6211,5604,5126,6328,6010,5046,7058,4984,6979,6192,5619,5642,6014,4405,5055,6541,6538,5941,5067,5794</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>5</mutationDuration>
+    <mutationDurations>0,2,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0</mutationDurations>
+    <nrCorrectRuns>28</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>67543,79004,105362,72327,70136,61757,69197,54438,70338,88312,63334,116961,86533,60900,82141,67520,61608,78700,62411,68475,70191,67408,110830,62789,67231,63156,104498,64114,62191</resetsEq>
+    <resetsEqSum>2159405</resetsEqSum>
+    <resetsMq>6963,6956,8947,6959,7456,5964,7954,5969,7458,7950,6963,6463,7954,6961,6469,8948,6467,8947,7955,6461,6959,7462,5469,6462,7956,7955,7454,6463,7062</resetsMq>
+    <resetsMqSum>209406</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>909</selectionDuration>
+    <selectionDurations>35,29,38,30,30,34,33,23,32,30,26,24,33,28,31,39,27,34,34,30,34,34,28,30,35,29,33,30,36</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>490948,557212,793391,508433,505663,448869,490381,389065,512176,626297,479312,835432,610149,460937,597259,482983,438469,558886,452212,495843,502231,487697,797239,448441,510167,474762,779121,461494,439957</stepsEq>
+    <stepsEqSum>15635026</stepsEqSum>
+    <stepsMq>63259,58917,82165,59187,67776,56965,69855,58661,72434,69734,66039,58682,74249,65827,61222,79256,68207,81667,72924,58497,62393,67063,55988,55543,74533,71479,66968,58534,60018</stepsMq>
+    <stepsMqSum>1918042</stepsMqSum>
+    <testSelectionSuite>60000</testSelectionSuite>
+    <testSuiteSize>52000</testSuiteSize>
+    <traceGenConfig>adapted-lee-yannakakis(exp-len=1,prefix-strategy=buggy)</traceGenConfig>
+</eval-statistics>

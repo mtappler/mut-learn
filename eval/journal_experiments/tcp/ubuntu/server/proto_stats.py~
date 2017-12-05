@@ -1,0 +1,20 @@
+
+values= [98561,127646,123118,96005,69587,93792,103380,79715,86037,123401,118171,96079,70512, 71419,92342,95462,144672,93584,72342,88165,75941,97869,79492,73897,70633,129696,78498,79196, 72856,78246,118135,91267,74311,124271,75056,91591,74075,75045,94802,97541,68426,80428,125907, 67231,91096,89691,123220,116254,70817,111494]
+
+s = sum(values)
+l = 50
+mean = s/l
+values.sort()
+median = (values[24] + values[25])/2
+firstquart = (values[12] + values[13])/2
+thirdquart = (values[37] + values[38])/2
+mini = values[0]
+maxi = values[49]
+
+
+print "mean:", mean
+print "median:", median
+print "first quart.:", firstquart
+print "third quart.:", thirdquart
+print "max.:", firstquart
+print "min.:", thirdquart

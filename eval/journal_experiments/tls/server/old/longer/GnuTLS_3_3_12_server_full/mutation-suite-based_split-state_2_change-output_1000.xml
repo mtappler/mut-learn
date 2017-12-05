@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.GnuTLS_3_3_12_server_full</experimentName>
+    <generationDuration>207225</generationDuration>
+    <generationDurations>7230,5839,5749,7402,6039,6391,7823,8088,5739,7478,7623,5878,7678,5909,7965,6719,7976,7383,5806,7634,7158,6089,6287,5797,5901,7403,7434,5914,7109,4671,5113</generationDurations>
+    <mutOpConfig>split-state(acc-seq=300, depth=2, diff-last=true, allow-equal-pre=true)_change-output</mutOpConfig>
+    <mutationDuration>4694</mutationDuration>
+    <mutationDurations>179,145,131,166,153,138,170,190,133,183,179,129,166,143,204,160,167,168,145,158,167,141,122,135,133,152,153,137,146,105,96</mutationDurations>
+    <nrCorrectRuns>30</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>1995,1739,1489,1496,1121,1750,1138,1638,1142,1728,1990,1432,1667,1361,1243,1223,1574,1593,1263,1356,1404,1256,1069,2493,1146,2009,1219,1097,1618,1766,1147</resetsEq>
+    <resetsEqSum>46162</resetsEqSum>
+    <resetsMq>660,549,550,659,549,549,660,660,549,659,659,550,660,549,659,549,660,658,548,659,659,550,549,548,549,659,659,549,661,438,393</resetsMq>
+    <resetsMqSum>18409</resetsMqSum>
+    <sampleConfig>reduce-to-min(kind=split-state-state)*element-based(fraction=1/(2^1.000000),kind=operator:split-state-2)</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>5048067</selectionDuration>
+    <selectionDurations>156611,140295,151082,151331,153777,172913,196818,205210,149601,170648,169560,160081,177226,161784,204634,159508,202606,167675,157038,167872,158636,155136,154136,153442,144122,156514,159533,155469,159575,140265,134969</selectionDurations>
+    <shortMutOpConfig>split-state_2_change-output</shortMutOpConfig>
+    <stepsEq>22716,20126,16167,17635,12768,20225,12539,18549,12273,19447,23326,15665,19221,15276,14558,13331,17641,18214,14098,14830,16043,13729,11577,29187,12564,22998,12848,11684,19273,19147,13695</stepsEq>
+    <stepsEqSum>521350</stepsEqSum>
+    <stepsMq>2616,2179,2292,2612,2177,2176,2612,2613,2177,2723,2613,2289,2614,2288,2723,2179,2615,2829,2175,2612,2613,2399,2287,2174,2176,2612,2612,2177,2730,1738,1457</stepsMq>
+    <stepsMqSum>74089</stepsMqSum>
+    <testSelectionSuite>200000</testSelectionSuite>
+    <testSuiteSize>1000</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:40, restart-prob:0.950000, stop-prob:0.050000, rand-word:4)</traceGenConfig>
+</eval-statistics>

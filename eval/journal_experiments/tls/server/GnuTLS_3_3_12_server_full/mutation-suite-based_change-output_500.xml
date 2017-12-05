@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.shorter.GnuTLS_3_3_12_server_full</experimentName>
+    <generationDuration>105377</generationDuration>
+    <generationDurations>1595,2077,2089,2091,2590,2062,1970,2490,1980,2064,2398,1999,1737,2589,2435,2271,2067,1564,2069,2467,1915,2120,2661,1985,2180,2375,2102,2408,2058,2075,2602,1992,2121,1689,2451,1670,1665,1651,1989,2060,2117,2064,2218,2140,2100,2085,1997,2466,2134,1683</generationDurations>
+    <mutOpConfig>change-output</mutOpConfig>
+    <mutationDuration>20</mutationDuration>
+    <mutationDurations>0,0,0,0,1,0,2,0,1,0,0,0,1,2,0,1,0,1,1,1,1,1,0,1,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,2,1,0,0,0,0,0,0,0,0,0</mutationDurations>
+    <nrCorrectRuns>50</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>505,504,506,505,573,506,554,508,575,507,563,504,505,519,574,506,507,507,508,595,763,555,510,505,505,508,507,508,610,505,523,623,529,582,542,503,505,504,574,507,520,580,554,506,532,505,518,507,506,506</resetsEq>
+    <resetsEqSum>26633</resetsEqSum>
+    <resetsMq>440,550,550,549,662,551,550,662,550,551,660,552,440,662,662,550,552,440,550,661,548,552,660,552,551,659,552,663,551,550,658,551,550,440,662,438,438,439,553,552,550,549,549,551,551,551,549,662,551,440</resetsMq>
+    <resetsMqSum>27966</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>33661</selectionDuration>
+    <selectionDurations>514,652,647,624,771,626,606,824,624,655,721,595,535,888,765,759,628,468,668,798,611,692,946,682,754,767,690,709,678,638,888,655,715,529,723,529,543,505,612,667,659,749,687,681,697,646,635,779,687,540</selectionDurations>
+    <shortMutOpConfig>change-output</shortMutOpConfig>
+    <stepsEq>9565,9604,9520,9561,10377,9657,10140,9627,10327,9683,10336,9550,9619,9798,10220,9641,9683,9589,9659,10509,13839,10146,9689,9603,9570,9571,9600,9648,11176,9640,9718,10811,9861,10566,9924,9576,9562,9570,10284,9633,9735,10425,10120,9592,9847,9595,9692,9683,9660,9687</stepsEq>
+    <stepsEqSum>496688</stepsEqSum>
+    <stepsMq>1967,2290,2402,2176,2629,2406,2294,2732,2402,2293,2724,2189,1965,2843,2736,2401,2297,1969,2180,2617,2282,2525,2944,2301,2184,2833,2184,2842,2294,2178,2719,2295,2405,1858,2737,1739,1848,1741,2199,2296,2292,2286,2398,2184,2189,2519,2287,2733,2295,1745</stepsMq>
+    <stepsMqSum>116844</stepsMqSum>
+    <testSelectionSuite>100000</testSelectionSuite>
+    <testSuiteSize>500</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:20, restart-prob:0.950000, stop-prob:0.050000, rand-word:3)</traceGenConfig>
+</eval-statistics>

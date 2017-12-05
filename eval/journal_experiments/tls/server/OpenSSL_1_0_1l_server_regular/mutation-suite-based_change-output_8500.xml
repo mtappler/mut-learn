@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.OpenSSL_1_0_1l_server_regular</experimentName>
+    <generationDuration>96710</generationDuration>
+    <generationDurations>14829,15006,10622,11988,10634,13172,10182,10277</generationDurations>
+    <mutOpConfig>change-output</mutOpConfig>
+    <mutationDuration>40</mutationDuration>
+    <mutationDurations>5,1,6,2,1,13,11,1</mutationDurations>
+    <nrCorrectRuns>7</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>8536,8532,8511,8505,8504,8536,8525,8504</resetsEq>
+    <resetsEqSum>68153</resetsEqSum>
+    <resetsMq>506,507,359,434,363,433,361,326</resetsMq>
+    <resetsMqSum>3289</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>25233</selectionDuration>
+    <selectionDurations>3875,3734,2653,3061,3083,3230,2996,2601</selectionDurations>
+    <shortMutOpConfig>change-output</shortMutOpConfig>
+    <stepsEq>156656,157368,156614,156478,156853,157083,156929,160766</stepsEq>
+    <stepsEqSum>1258747</stepsEqSum>
+    <stepsMq>2194,2417,1599,1834,1619,1967,1531,1358</stepsMq>
+    <stepsMqSum>14519</stepsMqSum>
+    <testSelectionSuite>300000</testSelectionSuite>
+    <testSuiteSize>8500</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:20, restart-prob:0.950000, stop-prob:0.050000, rand-word:3)</traceGenConfig>
+</eval-statistics>

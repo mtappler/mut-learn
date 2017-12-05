@@ -108,7 +108,7 @@ public class AdaptedLeeYannakakisGenerator implements TraceGenerator{
 	public void updateRandomSeed(long seed) {
 		this.seed = (int) seed;
 		pb = new ProcessBuilder(generatorPath, "--prefix",prefixStrategy,
-				"--seed", Integer.toString(this.seed) ,
+				"--seed", Integer.toString(this.seed),
 				"=", 
 				"random", "0", Integer.toString(expectedRandInfix));
 	}

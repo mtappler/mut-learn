@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.RSA_BSAFE_Java_6_1_1_server_regular</experimentName>
+    <generationDuration>66972</generationDuration>
+    <generationDurations>9383,9966,11708,10815,8683,10951,5466</generationDurations>
+    <mutOpConfig>split-state(acc-seq=300, depth=1, diff-last=true, allow-equal-pre=true)_change-output</mutOpConfig>
+    <mutationDuration>80</mutationDuration>
+    <mutationDurations>11,5,23,24,10,4,3</mutationDurations>
+    <nrCorrectRuns>6</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>117,202,140,165,128,178,101</resetsEq>
+    <resetsEqSum>1031</resetsEqSum>
+    <resetsMq>198,248,248,248,199,248,34</resetsMq>
+    <resetsMqSum>1423</resetsMqSum>
+    <sampleConfig>reduce-to-mean(kind=split-state-state)*element-based(fraction=1/(2^1.000000),kind=operator:split-state-1)</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>80167</selectionDuration>
+    <selectionDurations>10046,11625,12465,12871,10951,11957,10252</selectionDurations>
+    <shortMutOpConfig>split-state_1_change-output</shortMutOpConfig>
+    <stepsEq>1835,3200,2220,2608,1906,2787,1656</stepsEq>
+    <stepsEqSum>16212</stepsEqSum>
+    <stepsMq>696,882,882,882,699,882,66</stepsMq>
+    <stepsMqSum>4989</stepsMqSum>
+    <testSelectionSuite>300000</testSelectionSuite>
+    <testSuiteSize>100</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:20, restart-prob:0.950000, stop-prob:0.050000, rand-word:3)</traceGenConfig>
+</eval-statistics>

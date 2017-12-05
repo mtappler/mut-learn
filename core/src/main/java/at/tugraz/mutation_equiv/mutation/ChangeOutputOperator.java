@@ -53,7 +53,7 @@ public class ChangeOutputOperator extends MutationOperator {
 		Collection<FastMealyState<String>> allStates = machine.getStates();
 		CompoundSample fullSample = new CompoundSample("operator:change-output");
 		for(FastMealyState<String> s : allStates){
-			CompoundSample stateSample = new CompoundSample("state");
+			CompoundSample stateSample = new CompoundSample("change-out-state");
 			fullSample.addChild(stateSample);
 			
 			for(Symbol input : inputAlphabet){ 

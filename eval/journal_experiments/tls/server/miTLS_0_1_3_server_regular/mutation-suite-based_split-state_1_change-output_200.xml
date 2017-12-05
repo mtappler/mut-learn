@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.miTLS_0_1_3_server_regular</experimentName>
+    <generationDuration>81129</generationDuration>
+    <generationDurations>11991,10701,7576,7173,9892,8493,9467,8999,6837</generationDurations>
+    <mutOpConfig>split-state(acc-seq=300, depth=1, diff-last=true, allow-equal-pre=true)_change-output</mutOpConfig>
+    <mutationDuration>535</mutationDuration>
+    <mutationDurations>226,35,18,75,94,10,20,52,5</mutationDurations>
+    <nrCorrectRuns>8</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>230,308,254,212,229,385,378,242,265</resetsEq>
+    <resetsEqSum>2503</resetsEqSum>
+    <resetsMq>199,198,148,149,198,198,198,198,101</resetsMq>
+    <resetsMqSum>1587</resetsMqSum>
+    <sampleConfig>reduce-to-mean(kind=split-state-state)*element-based(fraction=1/(2^1.000000),kind=operator:split-state-1)</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>101006</selectionDuration>
+    <selectionDurations>12451,13125,8797,9122,10123,12333,12565,11932,10558</selectionDurations>
+    <shortMutOpConfig>split-state_1_change-output</shortMutOpConfig>
+    <stepsEq>3962,4736,4193,3800,3811,6039,6260,4143,4665</stepsEq>
+    <stepsEqSum>41609</stepsEqSum>
+    <stepsMq>698,695,509,511,696,695,694,696,262</stepsMq>
+    <stepsMqSum>5456</stepsMqSum>
+    <testSelectionSuite>300000</testSelectionSuite>
+    <testSuiteSize>200</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:20, restart-prob:0.950000, stop-prob:0.050000, rand-word:3)</traceGenConfig>
+</eval-statistics>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>mqtt.emqtt.two_client_will_retain</experimentName>
+    <generationDuration>2231</generationDuration>
+    <generationDurations>171,112,78,76,96,54,35,69,14,30,30,27,50,32,31,33,33,26,33,33,33,14,29,32,16,34,109,34,59,33,34,35,50,33,60,15,62,38,34,60,31,38,52,32,34,33,28,26,65,15</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>3</mutationDuration>
+    <mutationDurations>0,1,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</mutationDurations>
+    <nrCorrectRuns>0</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>7,7,6,6,11,12,7,10,5,6,6,7,8,6,9,6,9,8,10,7,7,5,7,10,5,6,14,6,9,9,6,9,14,7,8,5,9,6,6,10,8,6,7,8,6,8,6,8,8,5</resetsEq>
+    <resetsEqSum>381</resetsEqSum>
+    <resetsMq>93,74,92,93,140,167,110,332,9,93,75,75,167,74,76,74,93,74,74,93,93,9,74,92,9,92,603,76,167,75,92,74,113,93,167,9,114,111,75,169,38,92,168,76,92,111,92,92,264,9</resetsMq>
+    <resetsMqSum>5419</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>27</selectionDuration>
+    <selectionDurations>3,0,1,2,1,2,1,0,0,0,0,1,1,1,0,2,0,0,0,1,1,0,0,0,0,0,1,0,1,0,0,0,1,2,0,0,0,0,0,1,0,1,0,1,0,0,0,0,2,0</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>36,23,22,21,36,45,27,49,5,37,33,30,45,22,32,20,44,51,21,34,25,3,23,38,9,18,83,38,59,26,25,38,35,27,47,7,26,30,26,60,20,35,41,43,33,27,36,36,64,7</stepsEq>
+    <stepsEqSum>1618</stepsEqSum>
+    <stepsMq>265,182,263,265,424,523,326,1458,9,265,184,184,580,182,188,182,265,182,182,265,265,9,182,263,9,263,3902,188,520,184,263,182,296,265,521,9,297,328,184,589,74,263,582,187,263,328,263,263,1362,9</stepsMq>
+    <stepsMqSum>18687</stepsMqSum>
+    <testSelectionSuite>2000</testSelectionSuite>
+    <testSuiteSize>5</testSuiteSize>
+    <traceGenConfig>adapted-lee-yannakakis(exp-len=3,prefix-strategy=minimal)</traceGenConfig>
+</eval-statistics>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tcp.bsd.server</experimentName>
+    <generationDuration>1382283</generationDuration>
+    <generationDurations>65689,46437,64938,62670,64472,69830,62915,63231,48439,62570,62316,43960,56846,51773,50464,41981,63142,65107,59839,53436,41995,57036,54985,68212</generationDurations>
+    <mutOpConfig>split-state(acc-seq=100, depth=1, diff-last=true, allow-equal-pre=true)_change-output</mutOpConfig>
+    <mutationDuration>609898</mutationDuration>
+    <mutationDurations>27077,18659,26220,28977,26697,32426,32048,63063,20601,28376,21864,23683,18997,20261,15963,14662,17630,27112,34020,24493,16061,24238,19569,27201</mutationDurations>
+    <nrCorrectRuns>23</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>838,590,586,1015,735,890,1138,711,780,788,765,787,673,589,667,678,701,772,858,700,655,1223,742,1002</resetsEq>
+    <resetsEqSum>18883</resetsEqSum>
+    <resetsMq>10803,7202,10088,10084,9369,10806,10804,10082,7204,10083,10081,6481,9365,7920,7919,6479,10085,10083,9361,8646,7203,8642,7922,10614</resetsMq>
+    <resetsMqSum>217326</resetsMqSum>
+    <sampleConfig>reduce-to-min(kind=split-state-state)*element-based(fraction=1/(2^1.000000),kind=operator:split-state-1)</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>20447421</selectionDuration>
+    <selectionDurations>1033464,692887,881784,1010910,935811,991659,1042429,1260391,664942,984817,918935,652238,779661,779721,607565,542705,795702,882150,1009170,897765,704220,766486,648414,963595</selectionDurations>
+    <shortMutOpConfig>split-state_1_change-output</shortMutOpConfig>
+    <stepsEq>40221,29479,29251,50673,37244,44276,54625,36772,39702,39785,38541,40162,32810,29785,33683,34134,34075,39024,43309,34522,33101,59366,38020,48169</stepsEq>
+    <stepsEqSum>940729</stepsEqSum>
+    <stepsMq>167382,112152,139383,153761,118425,167000,166781,187541,107167,138630,137805,99038,134617,112771,91348,88912,160168,130599,145656,136959,105011,151294,166255,151779</stepsMq>
+    <stepsMqSum>3270434</stepsMqSum>
+    <testSelectionSuite>200000</testSelectionSuite>
+    <testSuiteSize>500</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:60, restart-prob:0.950000, stop-prob:0.050000, rand-word:6)</traceGenConfig>
+</eval-statistics>

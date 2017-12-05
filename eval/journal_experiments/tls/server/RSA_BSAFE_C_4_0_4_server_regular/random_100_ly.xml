@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.RSA_BSAFE_C_4_0_4_server_regular</experimentName>
+    <generationDuration>296</generationDuration>
+    <generationDurations>177,119</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>0</mutationDuration>
+    <mutationDurations>0,0</mutationDurations>
+    <nrCorrectRuns>1</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>160,110</resetsEq>
+    <resetsEqSum>270</resetsEqSum>
+    <resetsMq>297,196</resetsMq>
+    <resetsMqSum>493</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>1</selectionDuration>
+    <selectionDurations>0,1</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>1089,719</stepsEq>
+    <stepsEqSum>1808</stepsEqSum>
+    <stepsMq>1439,709</stepsMq>
+    <stepsMqSum>2148</stepsMqSum>
+    <testSelectionSuite>5000</testSelectionSuite>
+    <testSuiteSize>100</testSuiteSize>
+    <traceGenConfig>adapted-lee-yannakakis(exp-len=3,prefix-strategy=minimal)</traceGenConfig>
+</eval-statistics>

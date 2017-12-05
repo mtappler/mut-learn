@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.OpenSSL_1_0_1j_server_regular</experimentName>
+    <generationDuration>472</generationDuration>
+    <generationDurations>315,157</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>0</mutationDuration>
+    <mutationDurations>0,0</mutationDurations>
+    <nrCorrectRuns>1</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>5305,2525</resetsEq>
+    <resetsEqSum>7830</resetsEqSum>
+    <resetsMq>632,259</resetsMq>
+    <resetsMqSum>891</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>38</selectionDuration>
+    <selectionDurations>25,13</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>104934,50811</stepsEq>
+    <stepsEqSum>155745</stepsEqSum>
+    <stepsMq>2876,983</stepsMq>
+    <stepsMqSum>3859</stepsMqSum>
+    <testSelectionSuite>100000</testSelectionSuite>
+    <testSuiteSize>2500</testSuiteSize>
+    <traceGenConfig>rand-word(len=40)</traceGenConfig>
+</eval-statistics>

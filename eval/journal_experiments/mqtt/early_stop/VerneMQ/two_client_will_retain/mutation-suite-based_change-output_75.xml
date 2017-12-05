@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>mqtt.VerneMQ.two_client_will_retain</experimentName>
+    <generationDuration>11962</generationDuration>
+    <generationDurations>3277,2803,3071,2811</generationDurations>
+    <mutOpConfig>change-output</mutOpConfig>
+    <mutationDuration>4</mutationDuration>
+    <mutationDurations>2,2,0,0</mutationDurations>
+    <nrCorrectRuns>3</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>102,103,155,89</resetsEq>
+    <resetsEqSum>449</resetsEqSum>
+    <resetsMq>1422,1260,1416,1188</resetsMq>
+    <resetsMqSum>5286</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>6607</selectionDuration>
+    <selectionDurations>1735,1566,1784,1522</selectionDurations>
+    <shortMutOpConfig>change-output</shortMutOpConfig>
+    <stepsEq>4704,4689,7111,4057</stepsEq>
+    <stepsEqSum>20561</stepsEqSum>
+    <stepsMq>9494,10142,9077,9447</stepsMq>
+    <stepsMqSum>38160</stepsMqSum>
+    <testSelectionSuite>50000</testSelectionSuite>
+    <testSuiteSize>75</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:40, restart-prob:0.950000, stop-prob:0.050000, rand-word:6)</traceGenConfig>
+</eval-statistics>

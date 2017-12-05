@@ -66,7 +66,7 @@ public class NonProbMutationSelector extends AbstractMutationTestSelector{
 			Set<Integer> mutantIndexes = new HashSet<>(mutantsWithIndexes.keySet());
 			List<Pair<Integer, MealyMachine<Object, Symbol, Object, String>>> mutantsAsPairList = 
 					mutantsWithIndexes.entrySet().stream()
-					.map(entry -> new ImmutablePair<>(entry.getKey(), entry.getValue()))
+					.map(entry -> new ImmutablePair<>(entry.getKey(), entry.getValue().get()))
 					.collect(Collectors.toList());
 			selectedTests = killMutants(mutantsAsPairList,mutantIndexes)
 					.stream().map(MutationTestCase::getTrace).iterator();

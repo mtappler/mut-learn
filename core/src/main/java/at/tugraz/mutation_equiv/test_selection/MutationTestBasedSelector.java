@@ -17,21 +17,25 @@
  *******************************************************************************/
 package at.tugraz.mutation_equiv.test_selection;
 
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 import at.tugraz.mutation_equiv.MutationTestCase;
+import at.tugraz.mutation_equiv.TestCase;
 import net.automatalib.words.Alphabet;
 import net.automatalib.words.impl.Symbol;
 
 /**
- * A simple form of mutation-based selection which simply selects those 
- * tests that individually achieve high coverage, i.e. implements only the third
- * step of <code>MutationSuiteBasedSelector</code>.
+ * A simple form of mutation-based selection which simply selects those tests
+ * that individually achieve high coverage, i.e. implements only the third step
+ * of <code>MutationSuiteBasedSelector</code>.
  * 
- * It also performs well in some case and may be a good choice if the 
- * number of mutants and the number of tests for selection is large. In such 
- * cases, greedy selection may be slow. 
+ * It also performs well in some case and may be a good choice if the number of
+ * mutants and the number of tests for selection is large. In such cases, greedy
+ * selection may be slow.
  * 
  * @author Martin Tappler
  *
@@ -45,10 +49,9 @@ public class MutationTestBasedSelector extends AbstractMutationTestSelector {
 	@Override
 	public Iterator<List<Symbol>> select(List<MutationTestCase> tests) {
 		Iterator<List<Symbol>> selectedTests = null;
-		if(!mutantsWithIndexes.isEmpty()){	
-			selectedTests = tests.stream()
-					.sorted((o1, o2) -> o1.score < o2.score ? 1 : o1.score > o2.score ? -1 : 0)
-					.limit(testSuiteSize).map(MutationTestCase::getTrace).iterator();			
+		if (!mutantsWithIndexes.isEmpty()) {
+			selectedTests = tests.stream().sorted((o1, o2) -> o1.score < o2.score ? 1 : o1.score > o2.score ? -1 : 0)
+					.limit(testSuiteSize).map(MutationTestCase::getTrace).iterator();
 		} else {
 			selectedTests = tests.stream().limit(testSuiteSize).map(MutationTestCase::getTrace).iterator();
 		}

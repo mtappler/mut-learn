@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tcp.ubuntu.server</experimentName>
+    <generationDuration>169239</generationDuration>
+    <generationDurations>13581,16679,23072,13144,18485,24178,18613,22236,19251</generationDurations>
+    <mutOpConfig>change-output</mutOpConfig>
+    <mutationDuration>21</mutationDuration>
+    <mutationDurations>1,2,0,3,0,5,2,5,3</mutationDurations>
+    <nrCorrectRuns>8</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>3043,2934,2771,2664,2658,3142,3686,3063,3130</resetsEq>
+    <resetsEqSum>27091</resetsEqSum>
+    <resetsMq>6204,8272,10333,6894,8962,11726,8962,11025,9316</resetsMq>
+    <resetsMqSum>81694</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>61354</selectionDuration>
+    <selectionDurations>4690,5986,9832,4872,6439,8652,6185,8044,6654</selectionDurations>
+    <shortMutOpConfig>change-output</shortMutOpConfig>
+    <stepsEq>192265,183671,171973,169464,166884,197332,235862,193456,198224</stepsEq>
+    <stepsEqSum>1709131</stepsEqSum>
+    <stepsMq>86191,133310,119171,106186,123659,176712,135397,144131,134555</stepsMq>
+    <stepsMqSum>1159312</stepsMqSum>
+    <testSelectionSuite>200000</testSelectionSuite>
+    <testSuiteSize>2500</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:60, restart-prob:0.950000, stop-prob:0.050000, rand-word:6)</traceGenConfig>
+</eval-statistics>

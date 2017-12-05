@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>mqtt.hbmqtt.two_client_will_retain</experimentName>
+    <generationDuration>101408</generationDuration>
+    <generationDurations>2162,2188,2784,2177,2381,2162,1869,1859,1914,1991,1802,2190,1913,1572,2182,2212,2430,2513,2154,1888,1563,2178,2138,2299,2533,2159,1892,2450,2472,1907,2183,2792,1581,1293,2480,1251,1917,1859,2269,1595,2442,2471,2453,2319,1876,2083,2934,1676</generationDurations>
+    <mutOpConfig>change-output</mutOpConfig>
+    <mutationDuration>35</mutationDuration>
+    <mutationDurations>0,2,3,1,1,1,1,0,1,1,1,0,3,0,1,1,2,0,1,0,2,0,0,0,0,0,0,1,1,1,1,1,0,1,1,0,0,0,1,0,1,1,0,0,0,1,1,1</mutationDurations>
+    <nrCorrectRuns>47</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>215,148,240,154,144,176,145,133,139,130,181,175,140,130,173,245,224,132,191,140,150,146,145,134,160,159,248,181,162,149,137,206,134,129,146,134,132,158,151,129,223,179,300,135,153,148,268,145</resetsEq>
+    <resetsEqSum>7996</resetsEqSum>
+    <resetsMq>1100,1100,1417,1103,1104,1100,943,939,941,944,786,1098,939,786,1100,943,1257,1261,1100,945,782,1101,1099,1098,1260,1100,943,1257,1260,943,1102,1418,787,623,1260,625,946,941,1102,784,1259,1261,1261,1102,945,941,1104,736</resetsMq>
+    <resetsMqSum>49946</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>40349</selectionDuration>
+    <selectionDurations>820,885,1135,870,937,830,726,813,716,839,681,864,711,584,900,898,983,1048,849,745,632,923,962,873,925,871,711,997,964,745,817,1197,625,459,991,458,707,744,963,553,953,975,1016,934,729,829,1247,715</selectionDurations>
+    <shortMutOpConfig>change-output</shortMutOpConfig>
+    <stepsEq>9825,6750,11064,7036,6598,8063,6584,6085,6386,5935,8355,8001,6326,6004,7935,11302,10286,6014,8733,6405,6846,6653,6609,6098,7264,7261,11494,8250,7446,6821,6265,9422,6138,5922,6652,6190,6070,7270,6821,5933,10264,8181,13862,6169,7030,6682,12365,6625</stepsEq>
+    <stepsEqSum>366290</stepsEqSum>
+    <stepsMq>7488,8140,13348,8616,8314,8126,8661,6430,9429,6811,7178,7957,8026,6243,8298,8695,10258,10411,8283,6655,6025,9566,9268,9674,9333,7669,6983,11325,8700,8070,9232,10890,8600,4211,8234,4533,10580,6003,9894,5924,7759,9177,8562,8140,7765,7869,7857,5677</stepsMq>
+    <stepsMqSum>394887</stepsMqSum>
+    <testSelectionSuite>50000</testSelectionSuite>
+    <testSuiteSize>125</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:40, restart-prob:0.950000, stop-prob:0.050000, rand-word:6)</traceGenConfig>
+</eval-statistics>

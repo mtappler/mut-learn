@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.OpenSSL_1_0_1l_server_regular</experimentName>
+    <generationDuration>19055</generationDuration>
+    <generationDurations>1379,800,655,1370,1428,758,916,676,840,1023,586,918,1152,1460,1105,628,811,1372,1178</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>31</mutationDuration>
+    <mutationDurations>5,2,0,4,0,2,0,0,0,0,0,3,7,3,5,0,0,0,0</mutationDurations>
+    <nrCorrectRuns>18</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>10629,11013,10894,10233,15147,9611,9774,12847,10531,12357,11018,13075,10045,9744,10604,12143,10677,11251,10293</resetsEq>
+    <resetsEqSum>211886</resetsEqSum>
+    <resetsMq>576,361,430,504,576,431,503,288,286,359,430,503,431,576,432,504,431,503,346</resetsMq>
+    <resetsMqSum>8470</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>79</selectionDuration>
+    <selectionDurations>7,6,1,6,6,2,6,3,2,2,4,4,4,4,6,3,5,4,4</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>67544,69958,68465,63818,94310,60971,62041,80100,66194,76080,69626,82027,63539,62251,66415,76445,67298,71242,60678</stepsEq>
+    <stepsEqSum>1329002</stepsEqSum>
+    <stepsMq>2401,1604,1739,2107,2325,1812,2102,1236,1230,1453,1739,2031,1813,2323,1818,2183,1741,2032,1277</stepsMq>
+    <stepsMqSum>34966</stepsMqSum>
+    <testSelectionSuite>10000</testSelectionSuite>
+    <testSuiteSize>9500</testSuiteSize>
+    <traceGenConfig>adapted-lee-yannakakis(exp-len=3,prefix-strategy=minimal)</traceGenConfig>
+</eval-statistics>

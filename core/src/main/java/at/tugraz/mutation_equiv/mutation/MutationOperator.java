@@ -19,6 +19,7 @@ package at.tugraz.mutation_equiv.mutation;
 
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.stream.Stream;
 
@@ -31,6 +32,7 @@ import net.automatalib.automata.transout.impl.FastMealy;
 import net.automatalib.automata.transout.impl.FastMealyState;
 import net.automatalib.automata.transout.impl.MealyTransition;
 import net.automatalib.words.Alphabet;
+import net.automatalib.words.Word;
 import net.automatalib.words.impl.SimpleAlphabet;
 import net.automatalib.words.impl.Symbol;
 
@@ -105,5 +107,8 @@ public abstract class MutationOperator {
 		}
 		
 		return new ImmutablePair<FastMealy<Symbol,String>, Map<Object,FastMealyState<String>>>(copy, oldToNewStates);
+	}
+
+	public void setAccSequences(Map<FastMealyState<String>, List<Word<Symbol>>> accessSeqForStates) {
 	}
 }

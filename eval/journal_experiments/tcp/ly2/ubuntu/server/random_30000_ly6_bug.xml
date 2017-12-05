@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tcp.ly2.ubuntu.server</experimentName>
+    <generationDuration>314320</generationDuration>
+    <generationDurations>16804,14743,16679,15078,14725,17212,12535,13353,15289,17214,15726,13186,13414,11443,19736,16625,10538,15720,14746,15835,13719</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>2</mutationDuration>
+    <mutationDurations>0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0</mutationDurations>
+    <nrCorrectRuns>20</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>35127,37369,46236,47753,34423,119213,55933,43741,39486,69811,39410,45181,33929,34233,61471,79473,48655,35365,59356,56812,34559</resetsEq>
+    <resetsEqSum>1057536</resetsEqSum>
+    <resetsMq>12385,11005,12383,11002,11009,12383,9629,10317,11004,13077,11692,9628,10315,8941,14444,12383,7571,11695,10317,11696,9959</resetsMq>
+    <resetsMqSum>232835</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>895</selectionDuration>
+    <selectionDurations>60,37,46,52,41,44,36,39,40,45,44,40,34,30,56,44,29,37,66,41,34</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>503788,507344,628085,650022,465313,1616941,768372,593492,536339,953903,532594,621337,464839,473858,822228,1111195,660791,481939,809134,771034,484082</stepsEq>
+    <stepsEqSum>14456630</stepsEqSum>
+    <stepsMq>163735,127461,155274,131845,130513,166330,121553,124597,128406,156933,142027,132924,114723,98535,179896,161212,97571,148810,143339,143339,117292</stepsMq>
+    <stepsMqSum>2886315</stepsMqSum>
+    <testSelectionSuite>70000</testSelectionSuite>
+    <testSuiteSize>30000</testSuiteSize>
+    <traceGenConfig>adapted-lee-yannakakis(exp-len=6,prefix-strategy=buggy)</traceGenConfig>
+</eval-statistics>

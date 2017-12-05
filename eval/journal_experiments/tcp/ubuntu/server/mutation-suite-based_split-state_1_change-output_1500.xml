@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tcp.ubuntu.server</experimentName>
+    <generationDuration>71618</generationDuration>
+    <generationDurations>19690,18239,15348,18341</generationDurations>
+    <mutOpConfig>split-state(acc-seq=100, depth=1, diff-last=true, allow-equal-pre=true)_change-output</mutOpConfig>
+    <mutationDuration>24574</mutationDuration>
+    <mutationDurations>6693,6868,5351,5662</mutationDurations>
+    <nrCorrectRuns>3</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>2650,1715,3186,1573</resetsEq>
+    <resetsEqSum>9124</resetsEqSum>
+    <resetsMq>8953,9652,7578,8651</resetsMq>
+    <resetsMqSum>34834</resetsMqSum>
+    <sampleConfig>reduce-to-min(kind=split-state-state)*element-based(fraction=1/(2^1.000000),kind=operator:split-state-1)</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>1221499</selectionDuration>
+    <selectionDurations>308693,349685,252484,310637</selectionDurations>
+    <shortMutOpConfig>split-state_1_change-output</shortMutOpConfig>
+    <stepsEq>113095,76663,131876,68693</stepsEq>
+    <stepsEqSum>390327</stepsEqSum>
+    <stepsMq>112534,122936,110612,112886</stepsMq>
+    <stepsMqSum>458968</stepsMqSum>
+    <testSelectionSuite>200000</testSelectionSuite>
+    <testSuiteSize>1500</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:60, restart-prob:0.950000, stop-prob:0.050000, rand-word:6)</traceGenConfig>
+</eval-statistics>

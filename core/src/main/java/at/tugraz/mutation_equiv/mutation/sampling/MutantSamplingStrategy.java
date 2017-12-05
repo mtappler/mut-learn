@@ -32,4 +32,5 @@ package at.tugraz.mutation_equiv.mutation.sampling;
 public interface MutantSamplingStrategy {
 	MutantSample sample(MutantSample original);
 	String description();
+	void updateSeed(long seed);
 }

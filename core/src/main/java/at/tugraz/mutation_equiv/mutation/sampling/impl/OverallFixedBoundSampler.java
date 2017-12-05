@@ -51,4 +51,8 @@ public class OverallFixedBoundSampler implements MutantSamplingStrategy {
 	public String description() {
 		return String.format("overall(bound=%d)",bound);
 	}
+	@Override
+	public void updateSeed(long seed) {
+		randGen = new Random(seed);
+	}
 }

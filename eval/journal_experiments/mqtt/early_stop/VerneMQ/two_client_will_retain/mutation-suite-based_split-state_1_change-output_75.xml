@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>mqtt.VerneMQ.two_client_will_retain</experimentName>
+    <generationDuration>10995</generationDuration>
+    <generationDurations>4407,3310,3278</generationDurations>
+    <mutOpConfig>split-state(acc-seq=300, depth=1, diff-last=true, allow-equal-pre=true)_change-output</mutOpConfig>
+    <mutationDuration>427</mutationDuration>
+    <mutationDurations>159,141,127</mutationDurations>
+    <nrCorrectRuns>2</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>160,119,97</resetsEq>
+    <resetsEqSum>376</resetsEqSum>
+    <resetsMq>1573,1421,1337</resetsMq>
+    <resetsMqSum>4331</resetsMqSum>
+    <sampleConfig>reduce-to-min(kind=split-state-state)*element-based(fraction=1/(2^1.000000),kind=operator:split-state-1)</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>69618</selectionDuration>
+    <selectionDurations>26840,22858,19920</selectionDurations>
+    <shortMutOpConfig>split-state_1_change-output</shortMutOpConfig>
+    <stepsEq>6927,5080,4073</stepsEq>
+    <stepsEqSum>16080</stepsEqSum>
+    <stepsMq>11877,12472,9512</stepsMq>
+    <stepsMqSum>33861</stepsMqSum>
+    <testSelectionSuite>50000</testSelectionSuite>
+    <testSuiteSize>75</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:40, restart-prob:0.950000, stop-prob:0.050000, rand-word:6)</traceGenConfig>
+</eval-statistics>

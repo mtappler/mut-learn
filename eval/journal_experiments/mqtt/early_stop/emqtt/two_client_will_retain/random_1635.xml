@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>mqtt.emqtt.two_client_will_retain</experimentName>
+    <generationDuration>2267</generationDuration>
+    <generationDurations>34,44,53,43,49,28,53,45,37,52,46,48,30,59,44,44,36,51,42,44,50,48,57,53,37,37,57,51,47,34,52,51,55,38,46,52,46,40,30,44,49,59,39,47,43,50,50,47,33,43</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>3</mutationDuration>
+    <mutationDurations>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0</mutationDurations>
+    <nrCorrectRuns>49</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>1802,1874,1971,1738,1785,1695,2327,1876,1751,2121,1899,1727,1756,1778,1824,1709,1769,1704,2060,1884,1773,1969,1737,1899,1783,1818,2378,2067,1788,2042,3128,1740,1901,1678,1753,1855,1742,1864,1715,1685,2002,2058,1654,1776,1696,1961,1751,2952,1701,1972</resetsEq>
+    <resetsEqSum>94888</resetsEqSum>
+    <resetsMq>1165,1497,1826,1495,1667,996,1837,1669,1329,1666,1498,1662,996,2001,1501,1498,1331,1663,1664,1667,1667,1500,1835,1999,1331,1499,2003,1499,1498,1333,1663,1662,1667,1326,1832,1660,1666,1496,1103,1497,1663,2004,1332,1334,1330,1665,1663,1496,1162,1501</resetsMq>
+    <resetsMqSum>77514</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>166</selectionDuration>
+    <selectionDurations>0,3,3,2,2,2,4,4,5,6,4,2,1,2,2,3,1,2,9,4,4,4,1,1,0,7,5,4,3,3,3,3,3,3,9,2,5,4,4,3,5,6,4,2,3,3,6,1,2,2</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>44282,46996,50502,42997,44322,42745,58069,46645,43684,53330,47529,43381,43244,44341,45645,42868,44422,42340,51294,46288,44716,48650,42719,48223,44109,45483,59585,52023,44001,51106,80298,43145,47901,42938,44410,45223,44032,45641,42316,41781,51109,50266,41632,44299,41383,49327,43925,74190,41503,49848</stepsEq>
+    <stepsEqSum>2370706</stepsEqSum>
+    <stepsMq>12380,13490,12648,13311,12447,6989,15793,15031,11498,13954,11964,13067,7144,17004,13247,12848,12722,11912,12783,15141,16503,13667,14418,18857,11318,11342,16517,12844,12975,15060,14752,18718,15782,10319,13742,13260,18126,14275,9113,11467,16516,15234,9827,9494,9696,11329,18592,11297,9055,15199</stepsMq>
+    <stepsMqSum>664667</stepsMqSum>
+    <testSelectionSuite>10000</testSelectionSuite>
+    <testSuiteSize>1635</testSuiteSize>
+    <traceGenConfig>rand-word(len=50)</traceGenConfig>
+</eval-statistics>

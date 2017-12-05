@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tcp.ly.ubuntu.server</experimentName>
+    <generationDuration>46753</generationDuration>
+    <generationDurations>10540,9623,8891,9017,8682</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>0</mutationDuration>
+    <mutationDurations>0,0,0,0,0</mutationDurations>
+    <nrCorrectRuns>4</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>60668,65073,68521,112437,71425</resetsEq>
+    <resetsEqSum>378124</resetsEqSum>
+    <resetsMq>13061,13062,12374,13062,11484</resetsMq>
+    <resetsMqSum>63043</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>228</selectionDuration>
+    <selectionDurations>48,44,42,51,43</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>578336,637237,700882,1084212,681542</stepsEq>
+    <stepsEqSum>3682209</stepsEqSum>
+    <stepsMq>141170,152886,139789,139587,132526</stepsMq>
+    <stepsMqSum>705958</stepsMqSum>
+    <testSelectionSuite>60000</testSelectionSuite>
+    <testSuiteSize>54000</testSuiteSize>
+    <traceGenConfig>adapted-lee-yannakakis(exp-len=2,prefix-strategy=buggy)</traceGenConfig>
+</eval-statistics>

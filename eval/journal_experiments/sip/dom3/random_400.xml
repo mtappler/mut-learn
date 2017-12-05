@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>sip.dom3</experimentName>
+    <generationDuration>6138</generationDuration>
+    <generationDurations>451,463,464,525,427,463,354,452,408,512,358,351,508,402</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>0</mutationDuration>
+    <mutationDurations>0,0,0,0,0,0,0,0,0,0,0,0,0,0</mutationDurations>
+    <nrCorrectRuns>13</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>487,702,560,500,454,602,442,570,492,618,606,455,527,520</resetsEq>
+    <resetsEqSum>7535</resetsEqSum>
+    <resetsMq>5228,5881,5876,6534,5232,5882,4574,5883,5230,6532,4573,4575,6538,4908</resetsMq>
+    <resetsMqSum>77446</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>437</selectionDuration>
+    <selectionDurations>25,55,33,38,26,31,24,33,29,35,23,26,32,27</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>11955,17508,13711,12373,11032,15056,10970,14243,11440,15767,15520,11121,12894,13276</stepsEq>
+    <stepsEqSum>186866</stepsEqSum>
+    <stepsMq>48467,57106,41336,48072,79319,61723,36462,40084,41248,55338,37766,46952,66470,29237</stepsMq>
+    <stepsMqSum>689580</stepsMqSum>
+    <testSelectionSuite>100000</testSelectionSuite>
+    <testSuiteSize>400</testSuiteSize>
+    <traceGenConfig>rand-word(len=50)</traceGenConfig>
+</eval-statistics>

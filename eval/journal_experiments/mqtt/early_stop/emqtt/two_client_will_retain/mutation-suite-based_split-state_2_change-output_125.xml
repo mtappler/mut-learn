@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>mqtt.emqtt.two_client_will_retain</experimentName>
+    <generationDuration>180950</generationDuration>
+    <generationDurations>6581,7216,6248,6471,5527,7222,6715,6704,6656,5592,5534,5011,7433,4927,6129,5419,6189,4905,4889,5501,5409,6017,6808,5381,6652,6874,6206,4897,6260,5577</generationDurations>
+    <mutOpConfig>split-state(acc-seq=300, depth=2, diff-last=true, allow-equal-pre=true)_change-output</mutOpConfig>
+    <mutationDuration>21295</mutationDuration>
+    <mutationDurations>740,817,687,743,737,798,741,869,660,713,627,484,864,580,678,736,896,550,595,594,753,655,757,654,795,803,813,578,769,609</mutationDurations>
+    <nrCorrectRuns>29</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>230,318,242,148,158,212,158,262,158,169,136,139,219,155,160,168,170,147,175,248,186,171,245,217,168,153,239,143,154,182</resetsEq>
+    <resetsEqSum>5630</resetsEqSum>
+    <resetsMq>1666,1831,1664,1667,1496,1837,1832,1830,1831,1502,1498,1333,2001,1332,1665,1499,1664,1332,1332,1499,1501,1669,1832,1496,1840,1828,1666,1334,1670,1422</resetsMq>
+    <resetsMqSum>48569</resetsMqSum>
+    <sampleConfig>reduce-to-min(kind=split-state-state)*element-based(fraction=1/(2^3.000000),kind=operator:split-state-2)</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>2829840</selectionDuration>
+    <selectionDurations>91455,104099,93235,103555,88327,111579,99159,110087,98258,100747,89566,67605,113634,73989,94680,92447,83975,73988,78824,86988,96386,101870,104816,90740,111036,109018,96497,83485,96682,83113</selectionDurations>
+    <shortMutOpConfig>split-state_2_change-output</shortMutOpConfig>
+    <stepsEq>9886,13684,10428,6218,6716,9021,6711,11226,6678,7177,5726,5962,9317,6667,6734,7182,7224,6350,7554,10568,7983,7366,10494,9312,7205,6448,10206,6173,6561,7732</stepsEq>
+    <stepsEqSum>240509</stepsEqSum>
+    <stepsMq>16618,13564,15989,11797,12640,13145,14707,16337,13042,13070,11350,10345,15336,12861,13620,13334,10623,13256,10719,11821,11709,16628,14524,14139,17100,13621,12172,11778,13341,11680</stepsMq>
+    <stepsMqSum>400866</stepsMqSum>
+    <testSelectionSuite>100000</testSelectionSuite>
+    <testSuiteSize>125</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:40, restart-prob:0.950000, stop-prob:0.050000, rand-word:6)</traceGenConfig>
+</eval-statistics>

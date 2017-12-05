@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tcp.ly2.bsd.server</experimentName>
+    <generationDuration>523737</generationDuration>
+    <generationDurations>30217,34473,43521,45011,43276,43817,36672,44432,42828,42920,37271,38762,40537</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>126</mutationDuration>
+    <mutationDurations>10,7,4,5,13,8,12,10,14,12,9,6,16</mutationDurations>
+    <nrCorrectRuns>12</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>93681,65636,76848,96143,90118,97239,68358,106689,103595,73848,107885,91773,85823</resetsEq>
+    <resetsEqSum>1157636</resetsEqSum>
+    <resetsMq>9344,11507,12219,12941,12944,12942,10780,12221,12943,13668,11502,11506,12004</resetsMq>
+    <resetsMqSum>156521</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>1566</selectionDuration>
+    <selectionDurations>80,81,88,146,131,119,140,142,112,130,154,134,109</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>1315136,968402,1065597,1321733,1253046,1350727,948020,1498849,1431908,1025669,1502094,1270301,1245875</stepsEq>
+    <stepsEqSum>16197357</stepsEqSum>
+    <stepsMq>126439,150025,144326,161044,161758,150261,133132,158747,153139,161275,151339,152084,154366</stepsMq>
+    <stepsMqSum>1957935</stepsMqSum>
+    <testSelectionSuite>80000</testSelectionSuite>
+    <testSuiteSize>60000</testSuiteSize>
+    <traceGenConfig>adapted-lee-yannakakis(exp-len=6,prefix-strategy=buggy)</traceGenConfig>
+</eval-statistics>

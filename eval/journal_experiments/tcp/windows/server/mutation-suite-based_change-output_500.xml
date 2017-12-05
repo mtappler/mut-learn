@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tcp.windows.server</experimentName>
+    <generationDuration>61162</generationDuration>
+    <generationDurations>21360,21772,18030</generationDurations>
+    <mutOpConfig>change-output</mutOpConfig>
+    <mutationDuration>6</mutationDuration>
+    <mutationDurations>1,3,2</mutationDurations>
+    <nrCorrectRuns>2</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>1035,659,553</resetsEq>
+    <resetsEqSum>2247</resetsEqSum>
+    <resetsMq>6486,6482,5344</resetsMq>
+    <resetsMqSum>18312</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>16056</selectionDuration>
+    <selectionDurations>5458,6173,4425</selectionDurations>
+    <shortMutOpConfig>change-output</shortMutOpConfig>
+    <stepsEq>61196,36966,31424</stepsEq>
+    <stepsEqSum>129586</stepsEqSum>
+    <stepsMq>59001,66920,59198</stepsMq>
+    <stepsMqSum>185119</stepsMqSum>
+    <testSelectionSuite>200000</testSelectionSuite>
+    <testSuiteSize>500</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:60, restart-prob:0.950000, stop-prob:0.050000, rand-word:6)</traceGenConfig>
+</eval-statistics>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.shorter.GnuTLS_3_3_8_server_full</experimentName>
+    <generationDuration>12246</generationDuration>
+    <generationDurations>4628,4201,3417</generationDurations>
+    <mutOpConfig>change-output</mutOpConfig>
+    <mutationDuration>2</mutationDuration>
+    <mutationDurations>0,2,0</mutationDurations>
+    <nrCorrectRuns>2</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>115,184,110</resetsEq>
+    <resetsEqSum>409</resetsEqSum>
+    <resetsMq>2149,1964,1510</resetsMq>
+    <resetsMqSum>5623</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>3720</selectionDuration>
+    <selectionDurations>1441,1245,1034</selectionDurations>
+    <shortMutOpConfig>change-output</shortMutOpConfig>
+    <stepsEq>1024,1663,940</stepsEq>
+    <stepsEqSum>3627</stepsEqSum>
+    <stepsMq>10867,10744,7375</stepsMq>
+    <stepsMqSum>28986</stepsMqSum>
+    <testSelectionSuite>100000</testSelectionSuite>
+    <testSuiteSize>100</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:20, restart-prob:0.950000, stop-prob:0.050000, rand-word:3)</traceGenConfig>
+</eval-statistics>

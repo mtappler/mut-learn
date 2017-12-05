@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>mqtt.emqtt.two_client_will_retain</experimentName>
+    <generationDuration>9777</generationDuration>
+    <generationDurations>172,223,209,193,169,213,172,212,190,194,173,173,235,157,208,198,231,180,225,198,223,243,257,213,197,188,201,170,180,223,218,210,204,179,175,153,208,156,226,200,215,208,213,220,136,122,163,215,188,148</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>6</mutationDuration>
+    <mutationDurations>1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</mutationDurations>
+    <nrCorrectRuns>49</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>1518,1570,1713,2091,1719,1579,1690,1296,1561,1310,1228,1997,2149,1129,1498,1308,1396,1266,1607,1538,1686,1327,1676,1472,1612,1409,1363,1403,2276,2262,1449,1659,1768,2372,1387,1172,1792,1787,1220,1395,1474,1327,1672,1359,1464,1713,1259,2271,1276,1172</resetsEq>
+    <resetsEqSum>78637</resetsEqSum>
+    <resetsMq>1488,1984,1821,1653,1485,1819,1486,1819,1655,1653,1484,1487,1982,1320,1819,1652,1984,1495,1986,1655,1818,1818,2149,1818,1567,1652,1657,1489,1488,1986,1819,1817,1817,1657,1651,1322,1818,1325,1987,1654,1814,1819,1822,1820,1153,1155,1486,1817,1654,1324</resetsMq>
+    <resetsMqSum>83900</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>54</selectionDuration>
+    <selectionDurations>1,3,0,1,0,1,0,0,3,2,0,2,1,0,1,3,0,3,1,1,3,1,2,1,0,0,1,2,1,2,0,1,2,0,2,1,1,0,3,1,2,0,0,0,1,1,0,0,1,2</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>11583,11225,11578,13971,12231,10755,11857,9745,11345,9741,9191,14199,15436,8091,10791,9377,10055,9632,10796,11002,11893,9660,11429,10659,11363,10049,9996,9951,15924,15141,10741,11874,12652,16490,9879,8157,12644,12822,9072,10285,10224,9584,11784,9656,10270,11731,9034,15625,9421,8546</stepsEq>
+    <stepsEqSum>559157</stepsEqSum>
+    <stepsMq>10720,14022,13591,12304,11021,13663,9540,14263,11487,11309,10333,11344,13336,9394,12400,11511,13372,12965,13018,11220,11730,11408,14146,13888,12129,12006,11322,11364,12528,14513,11363,12016,12836,14235,11680,9217,13674,9957,14687,11802,11547,12412,14879,11912,7654,8498,10523,11445,11480,10054</stepsMq>
+    <stepsMqSum>597718</stepsMqSum>
+    <testSelectionSuite>2000</testSelectionSuite>
+    <testSuiteSize>1015</testSuiteSize>
+    <traceGenConfig>adapted-lee-yannakakis(exp-len=3,prefix-strategy=minimal)</traceGenConfig>
+</eval-statistics>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.GnuTLS_3_3_12_server_full</experimentName>
+    <generationDuration>4670</generationDuration>
+    <generationDurations>203,196,164,199,197,243,244,250,205,156,197,171,166,201,195,245,196,274,173,197,235,157,206</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>2</mutationDuration>
+    <mutationDurations>0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0</mutationDurations>
+    <nrCorrectRuns>22</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>4182,4546,5464,4336,7118,7631,4215,4033,4381,4681,4759,5831,4668,6315,5373,3774,5312,5121,3822,4326,5312,4099,4318</resetsEq>
+    <resetsEqSum>113617</resetsEqSum>
+    <resetsMq>548,550,438,548,551,661,662,661,549,440,550,439,439,549,550,660,548,773,439,551,662,438,430</resetsMq>
+    <resetsMqSum>12636</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>376</selectionDuration>
+    <selectionDurations>15,18,13,16,16,22,19,18,16,13,17,13,15,16,17,19,16,22,12,15,20,12,16</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>84775,90342,110473,86757,142262,152372,83902,81272,87408,93592,94823,116338,95229,127328,107359,75403,105973,101844,76108,85699,105733,81430,87120</stepsEq>
+    <stepsEqSum>2273542</stepsEqSum>
+    <stepsMq>2173,2181,1848,2283,2184,2618,2840,2618,2175,1856,2182,1853,1740,2175,2180,2724,2173,3170,1742,2185,2622,1739,1605</stepsMq>
+    <stepsMqSum>50866</stepsMqSum>
+    <testSelectionSuite>100000</testSelectionSuite>
+    <testSuiteSize>3500</testSuiteSize>
+    <traceGenConfig>rand-word(len=40)</traceGenConfig>
+</eval-statistics>

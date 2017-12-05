@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.miTLS_0_1_3_server_regular</experimentName>
+    <generationDuration>6635</generationDuration>
+    <generationDurations>1774,2405,2456</generationDurations>
+    <mutOpConfig>split-state(acc-seq=300, depth=1, diff-last=true, allow-equal-pre=true)_change-output</mutOpConfig>
+    <mutationDuration>29</mutationDuration>
+    <mutationDurations>9,12,8</mutationDurations>
+    <nrCorrectRuns>2</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>642,510,429</resetsEq>
+    <resetsEqSum>1581</resetsEqSum>
+    <resetsMq>149,200,134</resetsMq>
+    <resetsMqSum>483</resetsMqSum>
+    <sampleConfig>reduce-to-min(kind=split-state-state)</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>15215</selectionDuration>
+    <selectionDurations>5298,5013,4904</selectionDurations>
+    <shortMutOpConfig>split-state_1_change-output</shortMutOpConfig>
+    <stepsEq>12371,9002,9027</stepsEq>
+    <stepsEqSum>30400</stepsEqSum>
+    <stepsMq>511,699,358</stepsMq>
+    <stepsMqSum>1568</stepsMqSum>
+    <testSelectionSuite>100000</testSelectionSuite>
+    <testSuiteSize>400</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:40, restart-prob:0.950000, stop-prob:0.050000, rand-word:6)</traceGenConfig>
+</eval-statistics>

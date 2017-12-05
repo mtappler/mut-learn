@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.RSA_BSAFE_C_4_0_4_server_regular</experimentName>
+    <generationDuration>2020</generationDuration>
+    <generationDurations>162,133,136,139,177,140,176,147,141,134,146,136,149,104</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>0</mutationDuration>
+    <mutationDurations>0,0,0,0,0,0,0,0,0,0,0,0,0,0</mutationDurations>
+    <nrCorrectRuns>13</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>1060,1548,1237,1412,1192,2001,1866,1025,1178,1085,1139,1091,1107,1012</resetsEq>
+    <resetsEqSum>17953</resetsEqSum>
+    <resetsMq>297,294,294,295,368,294,368,294,294,294,294,294,295,197</resetsMq>
+    <resetsMqSum>4172</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>15</selectionDuration>
+    <selectionDurations>0,2,0,0,0,2,4,1,1,0,1,1,2,1</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>6549,9538,7287,8379,7211,12649,11786,6169,6790,6570,6814,6516,6263,6833</stepsEq>
+    <stepsEqSum>109354</stepsEqSum>
+    <stepsMq>1439,1056,1056,1058,1339,1055,1340,1056,1056,1055,1055,1056,1058,710</stepsMq>
+    <stepsMqSum>15389</stepsMqSum>
+    <testSelectionSuite>5000</testSelectionSuite>
+    <testSuiteSize>1000</testSuiteSize>
+    <traceGenConfig>adapted-lee-yannakakis(exp-len=3,prefix-strategy=minimal)</traceGenConfig>
+</eval-statistics>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.NSS_3_17_4_server_regular</experimentName>
+    <generationDuration>1820</generationDuration>
+    <generationDurations>1820</generationDurations>
+    <mutOpConfig>split-state(acc-seq=300, depth=1, diff-last=true, allow-equal-pre=true)_change-output</mutOpConfig>
+    <mutationDuration>2</mutationDuration>
+    <mutationDurations>2</mutationDurations>
+    <nrCorrectRuns>0</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>502</resetsEq>
+    <resetsEqSum>502</resetsEqSum>
+    <resetsMq>125</resetsMq>
+    <resetsMqSum>125</resetsMqSum>
+    <sampleConfig>reduce-to-min(kind=split-state-state)</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>5488</selectionDuration>
+    <selectionDurations>5488</selectionDurations>
+    <shortMutOpConfig>split-state_1_change-output</shortMutOpConfig>
+    <stepsEq>8741</stepsEq>
+    <stepsEqSum>8741</stepsEqSum>
+    <stepsMq>326</stepsMq>
+    <stepsMqSum>326</stepsMqSum>
+    <testSelectionSuite>100000</testSelectionSuite>
+    <testSuiteSize>500</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:40, restart-prob:0.950000, stop-prob:0.050000, rand-word:6)</traceGenConfig>
+</eval-statistics>

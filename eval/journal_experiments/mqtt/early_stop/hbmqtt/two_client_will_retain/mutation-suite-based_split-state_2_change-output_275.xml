@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>mqtt.hbmqtt.two_client_will_retain</experimentName>
+    <generationDuration>83262</generationDuration>
+    <generationDurations>4342,3739,4977,4393,5112,3765,5047,3775,5017,3190,4946,4418,4895,3744,4303,4350,3780,5063,4406</generationDurations>
+    <mutOpConfig>split-state(acc-seq=300, depth=2, diff-last=true, allow-equal-pre=true)_change-output</mutOpConfig>
+    <mutationDuration>10595</mutationDuration>
+    <mutationDurations>529,394,674,638,591,401,726,480,682,347,715,592,689,437,574,592,499,559,476</mutationDurations>
+    <nrCorrectRuns>18</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>302,292,298,555,315,284,336,289,608,281,319,312,637,331,504,347,319,335,368</resetsEq>
+    <resetsEqSum>7032</resetsEqSum>
+    <resetsMq>1099,944,1254,1101,1260,944,1259,943,1257,783,1258,1101,1255,943,1101,1100,941,1256,1040</resetsMq>
+    <resetsMqSum>20839</resetsMqSum>
+    <sampleConfig>reduce-to-min(kind=split-state-state)*element-based(fraction=1/(2^3.000000),kind=operator:split-state-2)</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>1022911</selectionDuration>
+    <selectionDurations>55160,42349,60288,54938,57222,43614,62455,44315,66233,40748,61054,59950,65497,44117,54274,53627,49338,58186,49546</selectionDurations>
+    <shortMutOpConfig>split-state_2_change-output</shortMutOpConfig>
+    <stepsEq>12809,12304,12524,23600,13334,11921,14194,12139,25582,11954,13370,13135,27101,14057,21311,14699,13430,13935,15692</stepsEq>
+    <stepsEqSum>297091</stepsEqSum>
+    <stepsMq>7666,7566,8957,12722,8890,7285,9022,6613,11331,4627,11831,7848,8190,7086,10201,7495,7397,7723,6182</stepsMq>
+    <stepsMqSum>158632</stepsMqSum>
+    <testSelectionSuite>100000</testSelectionSuite>
+    <testSuiteSize>275</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:40, restart-prob:0.950000, stop-prob:0.050000, rand-word:6)</traceGenConfig>
+</eval-statistics>

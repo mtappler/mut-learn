@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.even_shorter.OpenSSL_1_0_2_server_regular</experimentName>
+    <generationDuration>87494</generationDuration>
+    <generationDurations>2279,2874,2903,2296,2291,3577,2955,2840,2308,2263,3002,2840,2845,3433,2877,3427,2925,3458,2307,2936,2957,2344,2893,2908,2887,3460,3011,2852,2456,2911,2179</generationDurations>
+    <mutOpConfig>split-state(acc-seq=300, depth=1, diff-last=true, allow-equal-pre=true)_change-output</mutOpConfig>
+    <mutationDuration>122</mutationDuration>
+    <mutationDurations>3,3,3,3,3,6,4,4,3,3,2,6,4,3,5,5,4,1,2,6,2,5,4,4,5,6,5,5,4,6,3</mutationDurations>
+    <nrCorrectRuns>30</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>212,214,314,216,219,214,245,226,218,229,263,217,216,221,221,232,220,333,215,216,216,224,212,223,230,319,232,211,207,221,219</resetsEq>
+    <resetsEqSum>7175</resetsEqSum>
+    <resetsMq>204,255,255,204,205,305,255,254,203,203,255,255,255,306,256,307,253,305,204,255,254,205,255,253,254,308,256,254,205,255,175</resetsMq>
+    <resetsMqSum>7668</resetsMqSum>
+    <sampleConfig>reduce-to-mean(kind=split-state-state)*element-based(fraction=1/(2^1.000000),kind=operator:split-state-1)</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>116986</selectionDuration>
+    <selectionDurations>3074,3557,3719,3030,2988,4554,4029,4026,3013,3150,3724,3902,3970,4651,3815,4163,3838,3999,3099,4483,4223,2951,4218,4222,3815,3896,3600,4090,3488,3890,3809</selectionDurations>
+    <shortMutOpConfig>split-state_1_change-output</shortMutOpConfig>
+    <stepsEq>2032,2073,3048,2089,2041,2049,2390,2144,2038,2184,2549,2059,2046,2098,2086,2287,2064,3193,2094,2075,2036,2207,1995,2169,2203,3095,2198,2040,1973,2094,2153</stepsEq>
+    <stepsEqSum>68802</stepsEqSum>
+    <stepsMq>743,931,880,848,849,1059,878,876,741,846,880,875,929,1111,940,1067,873,1114,751,882,876,748,886,922,928,1124,986,874,748,928,611</stepsMq>
+    <stepsMqSum>27704</stepsMqSum>
+    <testSelectionSuite>300000</testSelectionSuite>
+    <testSuiteSize>200</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:10, restart-prob:0.950000, stop-prob:0.050000, rand-word:3)</traceGenConfig>
+</eval-statistics>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tcp.ly.windows.server</experimentName>
+    <generationDuration>114506</generationDuration>
+    <generationDurations>8000,7163,7616,9302,6649,6849,10041,9246,8137,7943,8234,8043,10571,6712</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>2</mutationDuration>
+    <mutationDurations>1,1,0,0,0,0,0,0,0,0,0,0,0,0</mutationDurations>
+    <nrCorrectRuns>13</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>49932,41703,61711,46374,54530,45509,47174,44263,46602,56258,47889,44008,44434,45332</resetsEq>
+    <resetsEqSum>675719</resetsEqSum>
+    <resetsMq>6472,5968,6468,7964,5475,5476,8465,7469,6469,6964,6961,6967,8959,5187</resetsMq>
+    <resetsMqSum>95264</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>406</selectionDuration>
+    <selectionDurations>27,25,26,33,24,23,38,33,22,33,29,30,37,26</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>560728,487715,703372,530168,615160,517914,538204,505194,528236,634874,537827,522594,505122,500438</stepsEq>
+    <stepsEqSum>7687546</stepsEqSum>
+    <stepsMq>67213,62310,70194,88011,62515,54502,88122,74502,68751,76964,67973,72515,91453,54046</stepsMq>
+    <stepsMqSum>999071</stepsMqSum>
+    <testSelectionSuite>60000</testSelectionSuite>
+    <testSuiteSize>40000</testSuiteSize>
+    <traceGenConfig>adapted-lee-yannakakis(exp-len=5,prefix-strategy=buggy)</traceGenConfig>
+</eval-statistics>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tcp.bsd.server</experimentName>
+    <generationDuration>131985</generationDuration>
+    <generationDurations>27410,25398,18825,30383,29969</generationDurations>
+    <mutOpConfig>change-output</mutOpConfig>
+    <mutationDuration>8</mutationDuration>
+    <mutationDurations>0,1,1,4,2</mutationDurations>
+    <nrCorrectRuns>4</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>847,555,514,1219,713</resetsEq>
+    <resetsEqSum>3848</resetsEqSum>
+    <resetsMq>10091,9366,6475,11527,10617</resetsMq>
+    <resetsMqSum>48076</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>34378</selectionDuration>
+    <selectionDurations>6925,7268,4890,7524,7771</selectionDurations>
+    <shortMutOpConfig>change-output</shortMutOpConfig>
+    <stepsEq>52400,35586,33230,75734,44236</stepsEq>
+    <stepsEqSum>241186</stepsEqSum>
+    <stepsMq>174828,160435,95790,180733,157945</stepsMq>
+    <stepsMqSum>769731</stepsMqSum>
+    <testSelectionSuite>200000</testSelectionSuite>
+    <testSuiteSize>500</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:60, restart-prob:0.950000, stop-prob:0.050000, rand-word:6)</traceGenConfig>
+</eval-statistics>

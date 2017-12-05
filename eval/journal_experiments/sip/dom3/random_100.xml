@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>sip.dom3</experimentName>
+    <generationDuration>819</generationDuration>
+    <generationDurations>409,410</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>0</mutationDuration>
+    <mutationDurations>0,0</mutationDurations>
+    <nrCorrectRuns>1</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>187,146</resetsEq>
+    <resetsEqSum>333</resetsEqSum>
+    <resetsMq>5228,4913</resetsMq>
+    <resetsMqSum>10141</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>56</selectionDuration>
+    <selectionDurations>29,27</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>4370,3645</stepsEq>
+    <stepsEqSum>8015</stepsEqSum>
+    <stepsMq>48467,42207</stepsMq>
+    <stepsMqSum>90674</stepsMqSum>
+    <testSelectionSuite>100000</testSelectionSuite>
+    <testSuiteSize>100</testSuiteSize>
+    <traceGenConfig>rand-word(len=50)</traceGenConfig>
+</eval-statistics>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.RSA_BSAFE_C_4_0_4_server_regular</experimentName>
+    <generationDuration>13918</generationDuration>
+    <generationDurations>2790,2164,2773,2531,2493,1167</generationDurations>
+    <mutOpConfig>change-output</mutOpConfig>
+    <mutationDuration>1</mutationDuration>
+    <mutationDurations>0,0,0,1,0,0</mutationDurations>
+    <nrCorrectRuns>5</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>2032,2030,2004,2031,2075,2001</resetsEq>
+    <resetsEqSum>12173</resetsEqSum>
+    <resetsMq>369,296,369,371,370,130</resetsMq>
+    <resetsMqSum>1905</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>4028</selectionDuration>
+    <selectionDurations>814,603,809,751,717,334</selectionDurations>
+    <shortMutOpConfig>change-output</shortMutOpConfig>
+    <stepsEq>59508,59108,58459,58762,60442,60140</stepsEq>
+    <stepsEqSum>356419</stepsEqSum>
+    <stepsMq>1340,1210,1340,1352,1419,516</stepsMq>
+    <stepsMqSum>7177</stepsMqSum>
+    <testSelectionSuite>100000</testSelectionSuite>
+    <testSuiteSize>2000</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:40, restart-prob:0.950000, stop-prob:0.050000, rand-word:6)</traceGenConfig>
+</eval-statistics>

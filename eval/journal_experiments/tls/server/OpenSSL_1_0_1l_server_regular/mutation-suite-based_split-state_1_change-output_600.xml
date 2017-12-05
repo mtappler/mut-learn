@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.OpenSSL_1_0_1l_server_regular</experimentName>
+    <generationDuration>332311</generationDuration>
+    <generationDurations>17542,12497,17064,15928,15120,15755,14547,14913,14925,13028,13002,13841,15496,17260,15263,16619,11624,13237,21268,14693,16373,12316</generationDurations>
+    <mutOpConfig>split-state(acc-seq=300, depth=1, diff-last=true, allow-equal-pre=true)_change-output</mutOpConfig>
+    <mutationDuration>685</mutationDuration>
+    <mutationDurations>22,34,41,12,17,19,17,38,24,38,35,19,36,38,27,42,24,15,56,68,30,33</mutationDurations>
+    <nrCorrectRuns>21</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>733,733,653,629,617,748,612,726,794,606,609,628,633,626,621,614,616,615,612,622,625,612</resetsEq>
+    <resetsEqSum>14284</resetsEqSum>
+    <resetsMq>507,360,507,434,435,434,433,434,432,359,363,435,508,507,436,505,361,435,580,433,507,328</resetsMq>
+    <resetsMqSum>9733</resetsMqSum>
+    <sampleConfig>reduce-to-mean(kind=split-state-state)*element-based(fraction=1/(2^1.000000),kind=operator:split-state-1)</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>321800</selectionDuration>
+    <selectionDurations>15865,13616,13980,14569,15317,14541,12903,15432,14821,14761,12100,12973,16403,16113,15027,19701,11452,13712,17192,14663,14021,12638</selectionDurations>
+    <shortMutOpConfig>split-state_1_change-output</shortMutOpConfig>
+    <stepsEq>8322,8617,8106,7914,7882,8835,8138,9022,9341,7937,8006,8401,8458,8098,8749,8214,8173,8267,8237,8539,8191,8766</stepsEq>
+    <stepsEqSum>184213</stepsEqSum>
+    <stepsMq>2052,1455,2268,1827,1903,1754,1824,1753,1748,1528,1546,1908,2418,2340,1980,2116,1537,1982,2775,1972,2193,1363</stepsMq>
+    <stepsMqSum>42242</stepsMqSum>
+    <testSelectionSuite>300000</testSelectionSuite>
+    <testSuiteSize>600</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:20, restart-prob:0.950000, stop-prob:0.050000, rand-word:3)</traceGenConfig>
+</eval-statistics>

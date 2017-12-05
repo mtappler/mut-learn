@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.OpenSSL_1_0_1l_server_regular</experimentName>
+    <generationDuration>186812</generationDuration>
+    <generationDurations>12977,14384,13344,15258,11503,12232,15649,13747,11601,17265,16674,11876,10431,9871</generationDurations>
+    <mutOpConfig>split-state(acc-seq=300, depth=1, diff-last=true, allow-equal-pre=true)_change-output</mutOpConfig>
+    <mutationDuration>447</mutationDuration>
+    <mutationDurations>30,35,18,45,13,19,40,54,33,54,19,30,17,40</mutationDurations>
+    <nrCorrectRuns>13</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>517,998,511,622,664,527,655,615,519,521,534,516,625,509</resetsEq>
+    <resetsEqSum>8333</resetsEqSum>
+    <resetsMq>437,506,434,508,432,434,505,505,433,578,580,432,359,327</resetsMq>
+    <resetsMqSum>6470</resetsMqSum>
+    <sampleConfig>reduce-to-mean(kind=split-state-state)*element-based(fraction=1/(2^1.000000),kind=operator:split-state-1)</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>188012</selectionDuration>
+    <selectionDurations>12942,14239,12702,14426,12202,12416,13383,14507,12972,16145,14714,13211,12402,11751</selectionDurations>
+    <shortMutOpConfig>split-state_1_change-output</shortMutOpConfig>
+    <stepsEq>6465,11983,6167,7697,7804,6467,7772,7597,6554,6371,6769,6060,7787,6625</stepsEq>
+    <stepsEqSum>102118</stepsEqSum>
+    <stepsMq>1913,2186,1975,2054,1747,1754,2040,2116,1822,2848,2635,1822,1453,1433</stepsMq>
+    <stepsMqSum>27798</stepsMqSum>
+    <testSelectionSuite>300000</testSelectionSuite>
+    <testSuiteSize>500</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:20, restart-prob:0.950000, stop-prob:0.050000, rand-word:3)</traceGenConfig>
+</eval-statistics>

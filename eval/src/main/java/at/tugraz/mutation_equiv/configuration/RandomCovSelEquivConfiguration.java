@@ -68,6 +68,9 @@ public class RandomCovSelEquivConfiguration<T extends TestCase> {
 	
 	public void updateRandomSeed(long seed){
 		traceGen.updateRandomSeed(seed);
+		mutantSampler.updateSeed(seed);
+		if(mutantGenerationSampler != null)
+			mutantGenerationSampler.updateSeed(seed);
 	}
 
 	public String mutationDescription() {

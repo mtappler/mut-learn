@@ -17,7 +17,6 @@
  *******************************************************************************/
 package at.tugraz.mutation_equiv.eval;
 
-
 import java.io.File;
 import java.io.FileReader;
 import java.io.PrintStream;
@@ -34,8 +33,11 @@ import javax.xml.bind.PropertyException;
 import javax.xml.bind.Unmarshaller;
 
 import at.tugraz.learning.suls.SULWithAlphabet;
+import at.tugraz.mutation_equiv.AccessSequenceProvider;
+import at.tugraz.mutation_equiv.LStarAccessSequenceProvider;
 import at.tugraz.mutation_equiv.RandomCoverageSelectionEQOracle;
 import at.tugraz.mutation_equiv.TestCase;
+import at.tugraz.mutation_equiv.TestTrackingSUL;
 import at.tugraz.mutation_equiv.configuration.RandomCovSelEquivConfiguration;
 import de.learnlib.acex.analyzers.AcexAnalyzers;
 import de.learnlib.algorithms.kv.mealy.KearnsVaziraniMealyBuilder;
@@ -58,16 +60,15 @@ import net.automatalib.words.Alphabet;
 import net.automatalib.words.impl.Symbol;
 
 /**
- * Class for evaluating randomised conformance testing technique. 
+ * Class for evaluating randomised conformance testing technique.
  * 
- * It implements iteration over different learning-set-ups
- * and executes them. To do that it runs a learning experiment
- * for each set up. Additionally, it logs result and checks whether
- * logs already exist for some set up. If a log exists it skips 
- * the experiment.
+ * It implements iteration over different learning-set-ups and executes them. To
+ * do that it runs a learning experiment for each set up. Additionally, it logs
+ * result and checks whether logs already exist for some set up. If a log exists
+ * it skips the experiment.
  * 
- * It has some several configuration options such as which learning
- * algorithm should be used. Most of them should should be self-explanatory.
+ * It has several configuration options such as which learning algorithm should
+ * be used. Most of them should should be self-explanatory.
  * 
  * @author Martin Tappler
  *
@@ -100,44 +101,48 @@ public class Evaluator {
 		this.seeds = seeds;
 		this.sul = sul;
 		this.experimentName = experimentName;
-		this.path  = path;
+		this.path = path;
 		System.setProperty("ranked_random.debug", "true");
 	}
 
-	public Evaluator(long[] seeds, SULWithAlphabet<Symbol, String> sul, String path, 
-			String experimentName, boolean verbose, boolean skipIfExists) {
-		this(seeds,sul,path, experimentName);
+	public Evaluator(long[] seeds, SULWithAlphabet<Symbol, String> sul, String path, String experimentName,
+			boolean verbose, boolean skipIfExists) {
+		this(seeds, sul, path, experimentName);
 		this.verbose = verbose;
 		this.skipIfExists = skipIfExists;
 	}
 
 	private SULWithAlphabet<Symbol, String> sul = null;
 	private JAXBContext statXMLContext;
+	private boolean earlyStop = true;
+	private boolean earlyStopForIncorrect = true;
 
 	public <T extends TestCase> void performMultMeasurementSeries(int startSuiteSize, int endSuiteSize, int stepSize,
-			int expectedStates, List<RandomCovSelEquivConfiguration<T>> configs){
-		for(RandomCovSelEquivConfiguration<T> c : configs){
-			 performMeasurementSeries(startSuiteSize, endSuiteSize, stepSize,expectedStates, c);
+			int expectedStates, List<RandomCovSelEquivConfiguration<T>> configs) {
+		for (RandomCovSelEquivConfiguration<T> c : configs) {
+			performMeasurementSeries(startSuiteSize, endSuiteSize, stepSize, expectedStates, c);
 		}
 	}
+
 	public <T extends TestCase> void performMeasurementSeries(int startSuiteSize, int endSuiteSize, int stepSize,
-			int expectedStates, RandomCovSelEquivConfiguration<T> config){
-		performMeasurementSeries(startSuiteSize, endSuiteSize, stepSize,config,expectedStates, true);
+			int expectedStates, RandomCovSelEquivConfiguration<T> config) {
+		performMeasurementSeries(startSuiteSize, endSuiteSize, stepSize, config, expectedStates);
 	}
+
 	public <T extends TestCase> void performMeasurementSeries(int startSuiteSize, int endSuiteSize, int stepSize,
-				RandomCovSelEquivConfiguration<T> config, int expectedStates, boolean earlyStop){
-		for(int suiteSize = startSuiteSize; suiteSize <= endSuiteSize; suiteSize += stepSize){
+			RandomCovSelEquivConfiguration<T> config, int expectedStates) {
+		for (int suiteSize = startSuiteSize; suiteSize <= endSuiteSize; suiteSize += stepSize) {
 			System.out.println("Measurements for suite size = " + suiteSize);
 			config.selector.updateSuiteSize(suiteSize);
 			String fullFileName = deriveFileName(config.nameSuffix, config.selector.description(),
 					config.shortMutationDescription(), suiteSize);
-			if(skipIfExists && new File(fullFileName).exists()){
-				if(perfectRun(fullFileName))
+			if (skipIfExists && new File(fullFileName).exists()) {
+				if (isEarlyStop() && perfectRun(fullFileName))
 					break;
 				else
 					continue;
 			}
-			
+
 			EvalStatistics statistics = performSingleMeasurement(config, expectedStates);
 			try {
 				persist(statistics, fullFileName);
@@ -146,19 +151,19 @@ public class Evaluator {
 				System.out.println(e.getMessage());
 				e.printStackTrace();
 			}
-			if(earlyStop && statistics.getNrCorrectRuns() == statistics.getNrRuns())
+			if (isEarlyStop() && statistics.getNrCorrectRuns() == statistics.getNrRuns())
 				break;
 		}
-		
+
 	}
 
 	private boolean perfectRun(String fullFileName) {
-		try{
+		try {
 			statXMLContext = JAXBContext.newInstance(EvalStatistics.class);
 			Unmarshaller um = statXMLContext.createUnmarshaller();
-	        EvalStatistics stats = (EvalStatistics) um.unmarshal(new FileReader(fullFileName));
-	        return stats.getNrRuns() == stats.getNrCorrectRuns();
-		} catch (Exception e){
+			EvalStatistics stats = (EvalStatistics) um.unmarshal(new FileReader(fullFileName));
+			return stats.getNrRuns() == stats.getNrCorrectRuns();
+		} catch (Exception e) {
 			System.out.println(e.getMessage());
 			e.printStackTrace();
 			return false;
@@ -169,31 +174,31 @@ public class Evaluator {
 		statXMLContext = JAXBContext.newInstance(EvalStatistics.class);
 		Marshaller m = statXMLContext.createMarshaller();
 		m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
-		 // Write to File
+		// Write to File
 		File target = new File(fullFileName);
-		if(!target.getParentFile().exists())
+		if (!target.getParentFile().exists())
 			target.getParentFile().mkdirs();
 		m.marshal(stat, target);
 	}
 
-	public String deriveFileName(String nameSuffix, String selectionDescription, 
-			String shortMutOpDesc, int testSuiteSize) {
+	public String deriveFileName(String nameSuffix, String selectionDescription, String shortMutOpDesc,
+			int testSuiteSize) {
 		String pathExtension = nameToPath(experimentName);
 		String fullPath = path + "/" + pathExtension;
 		String baseFileName = selectionDescription;
-		if(!shortMutOpDesc.equals("none"))
+		if (!shortMutOpDesc.equals("none"))
 			baseFileName += ("_" + shortMutOpDesc);
 		baseFileName += ("_" + testSuiteSize + nameSuffix + ".xml");
 		String fullFileName = fullPath + "/" + baseFileName;
 		return fullFileName;
 	}
-	
+
 	private String nameToPath(String experimentName) {
 		return experimentName.replace('.', '/');
 	}
-	
-	public <T extends TestCase> EvalStatistics 
-		performSingleMeasurement(RandomCovSelEquivConfiguration<T> config, int expectedStates){
+
+	public <T extends TestCase> EvalStatistics performSingleMeasurement(RandomCovSelEquivConfiguration<T> config,
+			int expectedStates) {
 		int nrCorrect = 0;
 		List<Long> stepsEq = new ArrayList<Long>(seeds.length);
 		List<Long> stepsMq = new ArrayList<Long>(seeds.length);
@@ -202,155 +207,151 @@ public class Evaluator {
 		List<Long> mutationDurations = new ArrayList<Long>(seeds.length);
 		List<Long> selectionDurations = new ArrayList<Long>(seeds.length);
 		List<Long> generationDurations = new ArrayList<Long>(seeds.length);
-		
-	    StatisticSUL<Symbol, String> statisticSul = 
-	            new ResetCounterSUL<>("membership queries", sul);
-	    Alphabet<Symbol> alphabet = sul.getAlphabet();
-	    // we specifically do not use a cache, as SULs are simulated caches
-	    // tend to really if learning is repeated fifty times with random testing with long
-	    // individual tests
-	    // SUL<Symbol,String> cacheSul = SULCaches.createCache(alphabet, statisticSul);
-	    StepCounterSUL stepCounterSUL = new StepCounterSUL(statisticSul);
-	    
-	    SULOracle<Symbol, String> mqOracle = new SULOracle<>(stepCounterSUL);
-		    // create random walks equivalence test
-	    RandomCoverageSelectionEQOracle<T> eqOracle = null;
-	    MealyExperiment<Symbol, String> experiment = null;
-	    MealyMachine<?, Symbol, ?, String> result = null;
-		MealyLearner<Symbol, String> learner = null;
-		
-		for(long i : seeds){
-	    	long currentSeed = (long)i;
-	    	config.updateRandomSeed(currentSeed);
-		    while(true){
-		    	try {
-		    		eqOracle = new RandomCoverageSelectionEQOracle<T>(
-		    				stepCounterSUL,
-		    				sul.getAlphabet(),
-		    				config.mutationOperators,
-		    				config.sizeTestSelectionSuite,
-		    				config.reuseRemaining,
-		    				config.selector,
-		    				config.traceGen,
-		    				config.mutantSampler);
-		    		config.selector.updateInitialSuiteSizes(new LinkedList<>(config.initialSuiteSizes));
-		    	    eqOracle.setMutantGenerationSampler(config.mutantGenerationSampler);
-		    	   	eqOracle.setKeepExecutedTests(config.keepExecutedTests);
-		    		if(useLstar)
-		    			learner = new ExtensibleLStarMealyBuilder<Symbol,String>()
-		    			.withAlphabet(alphabet)
-		    			.withOracle(mqOracle)
-		    			.create();
-		    		else if(useKV)
-		    			learner = new KearnsVaziraniMealyBuilder<Symbol,String>()
-		    			.withAlphabet(alphabet)
-		    			.withOracle(mqOracle)
-		    			.withCounterexampleAnalyzer(AcexAnalyzers.BINARY_SEARCH)
-		    			.create();
-		    		else if(useRV)
-		    			learner = new ExtensibleLStarMealy<>(alphabet, 
-		    					mqOracle, Collections.emptyList(), 
-		    					ObservationTableCEXHandlers.RIVEST_SCHAPIRE, 
-		    					ClosingStrategies.CLOSE_SHORTEST); // to match setup of Smeenk et al.
-		    		else
-				    	learner = new TTTLearnerMealyBuilder<Symbol,String>()
-				    		.withAlphabet(alphabet) // input alphabet
-				    		.withOracle(mqOracle)			  // membership oracle
-				    		.create();
 
-	    			experiment = new MealyExperiment<>(learner, eqOracle, alphabet);
-				    if(!verbose)
-				    	LearnLogger.getLogger(Experiment.class).setLevel(Level.WARNING);
-				    experiment.run();
-				    // get learned model
-				    result = experiment.getFinalHypothesis();
-				    stepsEq.add(eqOracle.getNrActualTestSteps());
-				    resetsEq.add((long) eqOracle.getNrExecutedTests());
-				    stepsMq.add(stepCounterSUL.getStepCount() - eqOracle.getNrActualTestSteps());
-				    resetsMq.add((long) (stepCounterSUL.getResets() - eqOracle.getNrExecutedTests()));
-				    mutationDurations.add(eqOracle.getMutationDuration());
-				    selectionDurations.add(eqOracle.getEvalAndSelDuration());
-				    generationDurations.add(eqOracle.getGenerationDuration());
-				    System.out.println("Executed " + eqOracle.getNrActualTestSteps() + 
-				    		" eq steps.");
-				    resetCounts(eqOracle,stepCounterSUL);
-				    break;
-				    // Exceptions are thrown by TTT in latest Maven-release of LearnLib
-				    // probably fixed on github, but I rather ignore such an exception and work with Maven
-				    // TTT is not used for the experiments anyway
-		    	} catch (Exception e){
-		    		int stackI = -1;
-		    		while(e.getStackTrace()[++stackI].getClassName().startsWith("java"));
-		    		if(e.getStackTrace()[stackI].getClassName().startsWith("de.learnlib")){
-			    		resetCounts(eqOracle,stepCounterSUL);
-			    		System.out.println("Caught exception with seed " + currentSeed);
-			    		System.out.println(e.getMessage());
-			    		if(e.getCause() != null){
-			    			System.out.println(e.getCause().getMessage());
-			    			e.getCause().printStackTrace();
-			    		}
-			    		e.printStackTrace();
-			    		currentSeed ++;
-		    		}
-		    		else throw e;
-		    	}
-		    }
-		    // report results
-		    System.out.println("-------------------------------------------------------");
-			// because of minimality of the result we know that we learned the correct model by checking the number of states //sanityCheckOracle.findCounterExample(result, alphabet) == null)
-			if( result.size() == expectedStates) {
-				nrCorrect ++;
+		StatisticSUL<Symbol, String> statisticSul = new ResetCounterSUL<>("membership queries", sul);
+		Alphabet<Symbol> alphabet = sul.getAlphabet();
+		// we specifically do not use a cache, as SULs are simulated caches
+		// tend to grow really big if learning is repeated fifty times with
+		// random testing with long
+		// individual tests
+		// SUL<Symbol,String> cacheSul = SULCaches.createCache(alphabet,
+		// statisticSul);
+		StepCounterSUL stepCounterSUL = new StepCounterSUL(statisticSul);
+		TestTrackingSUL trackingSul = new TestTrackingSUL(stepCounterSUL);
+
+		SULOracle<Symbol, String> mqOracle = new SULOracle<>(trackingSul);
+		// create random walks equivalence test
+		RandomCoverageSelectionEQOracle<T> eqOracle = null;
+		MealyExperiment<Symbol, String> experiment = null;
+		MealyMachine<?, Symbol, ?, String> result = null;
+		MealyLearner<Symbol, String> learner = null;
+
+		for (long i : seeds) {
+			long currentSeed = (long) i;
+			config.updateRandomSeed(currentSeed);
+			boolean incorrectRun = false;
+			while (true) {
+				try {
+					eqOracle = new RandomCoverageSelectionEQOracle<T>(trackingSul, sul.getAlphabet(),
+							config.mutationOperators, config.sizeTestSelectionSuite, config.reuseRemaining,
+							config.selector, config.traceGen, config.mutantSampler);
+					config.selector.updateInitialSuiteSizes(new LinkedList<>(config.initialSuiteSizes));
+					eqOracle.setMutantGenerationSampler(config.mutantGenerationSampler);
+					eqOracle.setKeepExecutedTests(config.keepExecutedTests);
+
+					AccessSequenceProvider accSeqProvider = null;
+					if (useLstar)
+						learner = new ExtensibleLStarMealyBuilder<Symbol, String>().withAlphabet(alphabet)
+								.withOracle(mqOracle).create();
+					else if (useKV)
+						learner = new KearnsVaziraniMealyBuilder<Symbol, String>().withAlphabet(alphabet)
+								.withOracle(mqOracle).withCounterexampleAnalyzer(AcexAnalyzers.BINARY_SEARCH).create();
+					else if (useRV) {
+						ExtensibleLStarMealy<Symbol, String> lstar = new ExtensibleLStarMealy<>(alphabet, mqOracle,
+								Collections.emptyList(), ObservationTableCEXHandlers.RIVEST_SCHAPIRE,
+								ClosingStrategies.CLOSE_SHORTEST);
+						// accSeqProvider = new
+						// LStarAccessSequenceProvider(lstar);
+						learner = lstar;
+					} else
+						learner = new TTTLearnerMealyBuilder<Symbol, String>().withAlphabet(alphabet) // input
+																										// alphabet
+								.withOracle(mqOracle) // membership oracle
+								.create();
+					experiment = new MealyExperiment<>(learner, eqOracle, alphabet);
+					eqOracle.setAccSeqProvider(accSeqProvider);
+					if (!verbose)
+						LearnLogger.getLogger(Experiment.class).setLevel(Level.WARNING);
+					experiment.run();
+					trackingSul.clear();
+					// get learned model
+					result = experiment.getFinalHypothesis();
+					stepsEq.add(eqOracle.getNrActualTestSteps());
+					resetsEq.add((long) eqOracle.getNrExecutedTests());
+					stepsMq.add(stepCounterSUL.getStepCount() - eqOracle.getNrActualTestSteps());
+					resetsMq.add((long) (stepCounterSUL.getResets() - eqOracle.getNrExecutedTests()));
+					System.out.println("Resets mq: " + (stepCounterSUL.getResets() - eqOracle.getNrExecutedTests()));
+					System.out.println("Resets eq: " + eqOracle.getNrExecutedTests());
+					mutationDurations.add(eqOracle.getMutationDuration());
+					selectionDurations.add(eqOracle.getEvalAndSelDuration());
+					generationDurations.add(eqOracle.getGenerationDuration());
+					System.out.println("Executed " + eqOracle.getNrActualTestSteps() + " eq steps.");
+					resetCounts(eqOracle, stepCounterSUL);
+					break;
+					// Exceptions are thrown by TTT in latest Maven-release of
+					// LearnLib
+					// probably fixed on github, but I rather ignore such an
+					// exception and work with Maven
+					// TTT is not used for the experiments anyway
+				} catch (Exception e) {
+					int stackI = -1;
+					while (e.getStackTrace()[++stackI].getClassName().startsWith("java"))
+						;
+					if (e.getStackTrace()[stackI].getClassName().startsWith("de.learnlib")) {
+						resetCounts(eqOracle, stepCounterSUL);
+						System.out.println("Caught exception with seed " + currentSeed);
+						System.out.println(e.getMessage());
+						if (e.getCause() != null) {
+							System.out.println(e.getCause().getMessage());
+							e.getCause().printStackTrace();
+						}
+						e.printStackTrace();
+						currentSeed++;
+					} else
+						throw e;
+				}
+			}
+			// report results
+			System.out.println("-------------------------------------------------------");
+			// because of minimality of the result we know that we learned the
+			// correct model by checking the number of states
+			// //sanityCheckOracle.findCounterExample(result, alphabet) == null)
+			if (result.size() == expectedStates) {
+				nrCorrect++;
 				System.out.println("We learned the correct model for " + i);
 				System.out.println();
-			}
-			else 
+			} else {
 				System.out.println("We did not learn the correct model for " + i);
-		    if(verbose){
+				incorrectRun = true;
+			}
+			if (verbose) {
 				System.out.println("Actual steps executed: " + eqOracle.getNrActualTestSteps());
-			    // profiling
-			    System.out.println(SimpleProfiler.getResults());
-			
-			    // learning statistics
-			    System.out.println(experiment.getRounds().getSummary());
-			    System.out.println(statisticSul.getStatisticalData().getSummary());    
-			    // model statistics
-			    System.out.println("States: " + result.size());
-		    }
-		    try{
-		        File outputFile = new File("SUL_mm.dot");
-		        PrintStream psDotFile = new PrintStream(outputFile);
-		        GraphDOT.write(result, alphabet, psDotFile); // may throw IOException!
-		    }catch(Exception e){
-		    }
+				// profiling
+				System.out.println(SimpleProfiler.getResults());
+
+				// learning statistics
+				System.out.println(experiment.getRounds().getSummary());
+				System.out.println(statisticSul.getStatisticalData().getSummary());
+				// model statistics
+				System.out.println("States: " + result.size());
+			}
+			if (earlyStopForIncorrect && incorrectRun)
+				break;
+			// try{
+			// File outputFile = new File("SUL_mm.dot");
+			// PrintStream psDotFile = new PrintStream(outputFile);
+			// GraphDOT.write(result, alphabet, psDotFile); // may throw
+			// IOException!
+			// }catch(Exception e){
+			// }
 		}
-	    System.out.println("We had "+ nrCorrect + " correct and executed " + stepsEq.get(stepsEq.size()-1) + 
-				" equiv steps in total and " + stepsMq.get(stepsEq.size()-1) + " steps for membership queries");
-		
-		return new EvalStatistics(
-				experimentName,
-				config.selector.description(),
-				config.mutationDescription(),
-				config.shortMutationDescription(),
-				config.mutantSampler.description(),
-				config.traceGen.description(),
-				config.sizeTestSelectionSuite,
-				config.selector.getSuiteSize(),
-				sum(stepsEq), stepsEq,
-				sum(stepsMq), stepsMq,
-				sum(resetsEq), resetsEq,
-				sum(resetsMq), resetsMq,
-				seeds.length,nrCorrect,
-				sum(mutationDurations), mutationDurations,
-				sum(selectionDurations), selectionDurations,
-				sum(generationDurations),generationDurations
-				);
+		System.out.println("We had " + nrCorrect + " correct and executed " + stepsEq.get(stepsEq.size() - 1)
+				+ " equiv steps in total and " + stepsMq.get(stepsEq.size() - 1) + " steps for membership queries");
+
+		return new EvalStatistics(experimentName, config.selector.description(), config.mutationDescription(),
+				config.shortMutationDescription(), config.mutantSampler.description(), config.traceGen.description(),
+				config.sizeTestSelectionSuite, config.selector.getSuiteSize(), sum(stepsEq), stepsEq, sum(stepsMq),
+				stepsMq, sum(resetsEq), resetsEq, sum(resetsMq), resetsMq, seeds.length, nrCorrect,
+				sum(mutationDurations), mutationDurations, sum(selectionDurations), selectionDurations,
+				sum(generationDurations), generationDurations);
 	}
 
-	private long sum(List<Long> longs){
-		return longs.stream().reduce(0l, (x,y) -> x+y);
+	private long sum(List<Long> longs) {
+		return longs.stream().reduce(0l, (x, y) -> x + y);
 	}
-	private <T extends TestCase> void 
-	resetCounts(RandomCoverageSelectionEQOracle<T> eqOracle, StepCounterSUL stepCounterSUL) {
+
+	private <T extends TestCase> void resetCounts(RandomCoverageSelectionEQOracle<T> eqOracle,
+			StepCounterSUL stepCounterSUL) {
 		eqOracle.resetEvalAndSelDuration();
 		eqOracle.resetGenerationDuration();
 		eqOracle.resetMutationDuration();
@@ -372,5 +373,17 @@ public class Evaluator {
 
 	public void setShrink(boolean shrink) {
 		this.shrink = shrink;
+	}
+
+	public boolean isEarlyStop() {
+		return earlyStop;
+	}
+
+	public void setEarlyStop(boolean earlyStop) {
+		this.earlyStop = earlyStop;
+	}
+
+	public void setEarlyStopForIncorrect(boolean b) {
+		this.earlyStopForIncorrect = b;
 	}
 }

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.shorter.RSA_BSAFE_C_4_0_4_server_regular</experimentName>
+    <generationDuration>20237</generationDuration>
+    <generationDurations>1902,2337,1909,1557,1853,1878,1517,1560,1497,1568,1173,1486</generationDurations>
+    <mutOpConfig>change-output</mutOpConfig>
+    <mutationDuration>1</mutationDuration>
+    <mutationDurations>0,0,0,0,1,0,0,0,0,0,0,0</mutationDurations>
+    <nrCorrectRuns>11</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>4833,4835,4830,4803,4830,4854,9358,4821,9241,4803,4802,4821</resetsEq>
+    <resetsEqSum>66831</resetsEqSum>
+    <resetsMq>369,443,368,295,368,368,294,294,294,295,220,264</resetsMq>
+    <resetsMqSum>3872</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>6212</selectionDuration>
+    <selectionDurations>589,676,577,498,611,564,458,477,458,506,342,456</selectionDurations>
+    <shortMutOpConfig>change-output</shortMutOpConfig>
+    <stepsEq>87239,88226,87959,87685,88165,88197,174247,87369,171643,87361,87520,91453</stepsEq>
+    <stepsEqSum>1227064</stepsEqSum>
+    <stepsMq>1340,1697,1561,1134,1487,1340,1055,1056,1055,1056,846,977</stepsMq>
+    <stepsMqSum>14604</stepsMqSum>
+    <testSelectionSuite>100000</testSelectionSuite>
+    <testSuiteSize>4800</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:20, restart-prob:0.950000, stop-prob:0.050000, rand-word:3)</traceGenConfig>
+</eval-statistics>

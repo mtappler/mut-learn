@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>mqtt.no_early_stop.hbmqtt.two_client_will_retain</experimentName>
+    <generationDuration>96381</generationDuration>
+    <generationDurations>1895,2474,1889,1885,1852,1598,1938,1634,1606,1630,2164,2275,1872,1569,2816,1565,2175,1905,1608,2222,1577,2879,1946,1581,1611,1958,2249,1953,2196,1922,1904,1585,2163,1913,1608,1610,1905,1602,1863,1595,1865,2190,978,2217,1892,2574,2166,1872,1596,2839</generationDurations>
+    <mutOpConfig>split-state(acc-seq=100, depth=1, diff-last=true, allow-equal-pre=true)_change-output</mutOpConfig>
+    <mutationDuration>3976</mutationDuration>
+    <mutationDurations>77,107,94,59,79,46,68,43,50,56,86,77,74,57,143,68,104,63,66,96,88,137,64,47,55,63,79,79,101,69,88,74,128,77,80,71,68,57,75,70,96,77,30,72,99,135,104,81,72,127</mutationDurations>
+    <nrCorrectRuns>24</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>35,44,41,33,34,29,33,36,31,31,45,43,50,36,88,43,56,30,34,36,37,66,35,32,29,40,40,55,39,40,35,40,60,35,62,30,40,46,47,37,53,38,28,40,36,61,61,37,30,53</resetsEq>
+    <resetsEqSum>2090</resetsEqSum>
+    <resetsMq>837,1260,944,943,943,697,945,740,787,738,1105,977,838,697,1421,694,1099,895,699,1102,784,1419,834,696,742,889,1039,887,1040,891,891,787,1103,838,783,785,834,786,836,694,887,1105,414,981,944,1266,1105,943,788,1417</resetsMq>
+    <resetsMqSum>45769</resetsMqSum>
+    <sampleConfig>reduce-to-min(kind=split-state-state)*element-based(fraction=1/(2^0.000000),kind=operator:split-state-1)</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>888571</selectionDuration>
+    <selectionDurations>18906,22219,19489,16796,18143,13183,15407,12926,13865,13931,20196,18934,17945,14857,26671,15218,21760,15530,15090,20199,15932,25257,16125,13136,14340,15336,19204,16883,20481,16710,20488,15532,22535,18432,15277,16160,16776,15035,18364,15692,19391,19306,8339,19620,18905,23196,23052,17984,15633,24185</selectionDurations>
+    <shortMutOpConfig>split-state_1_change-output</shortMutOpConfig>
+    <stepsEq>1446,1810,1721,1370,1403,1223,1334,1504,1309,1279,1880,1790,2102,1489,3704,1840,2330,1298,1454,1460,1531,2806,1452,1365,1215,1668,1664,2276,1603,1665,1453,1674,2542,1445,2596,1244,1643,1947,1969,1553,2203,1581,1181,1687,1508,2584,2608,1528,1267,2155</stepsEq>
+    <stepsEqSum>87359</stepsEqSum>
+    <stepsMq>4576,10783,7280,6660,9955,5750,7749,7313,5471,5791,9121,7663,5521,4107,11972,7253,6550,8974,6084,7348,7496,13052,6763,4201,6177,7290,9088,6375,10566,8015,9221,7997,11504,4884,7153,8601,4645,7340,9430,5573,8588,7574,3507,7285,11700,11786,10899,7274,6416,10830</stepsMq>
+    <stepsMqSum>387151</stepsMqSum>
+    <testSelectionSuite>50000</testSelectionSuite>
+    <testSuiteSize>25</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:40, restart-prob:0.950000, stop-prob:0.050000, rand-word:6)</traceGenConfig>
+</eval-statistics>

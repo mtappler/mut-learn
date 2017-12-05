@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.RSA_BSAFE_Java_6_1_1_server_regular</experimentName>
+    <generationDuration>5124</generationDuration>
+    <generationDurations>153,162,134,156,133,164,140,128,116,160,148,129,176,209,132,159,130,130,126,168,152,164,173,127,128,132,157,160,200,133,168,129,125,132,91</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>4</mutationDuration>
+    <mutationDurations>1,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0</mutationDurations>
+    <nrCorrectRuns>34</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>916,755,615,648,1016,687,659,586,653,823,841,523,688,1295,755,555,793,894,876,725,924,779,869,725,559,754,686,988,1040,625,680,752,655,716,576</resetsEq>
+    <resetsEqSum>26631</resetsEqSum>
+    <resetsMq>248,248,198,248,198,249,198,198,198,248,248,198,248,298,198,248,198,198,198,248,248,248,248,198,198,198,248,248,298,198,248,198,198,199,101</resetsMq>
+    <resetsMqSum>7785</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>37</selectionDuration>
+    <selectionDurations>1,2,0,2,0,2,1,1,1,0,2,0,1,2,0,2,1,2,0,1,1,1,1,0,2,1,2,2,0,0,1,3,0,1,1</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>4928,4107,3348,3497,5700,3746,3796,3280,3723,4607,4585,2972,3587,6744,4013,3123,4426,4641,4384,4267,4906,4151,4541,3864,3188,4242,3711,5127,5541,3680,3773,4153,3689,3893,2842</stepsEq>
+    <stepsEqSum>144775</stepsEqSum>
+    <stepsMq>883,883,697,882,696,885,697,695,696,882,882,696,882,1066,696,880,696,694,694,883,880,883,882,695,694,695,883,882,1066,694,882,694,694,697,263</stepsMq>
+    <stepsMqSum>27449</stepsMqSum>
+    <testSelectionSuite>5000</testSelectionSuite>
+    <testSuiteSize>500</testSuiteSize>
+    <traceGenConfig>adapted-lee-yannakakis(exp-len=3,prefix-strategy=minimal)</traceGenConfig>
+</eval-statistics>

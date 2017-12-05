@@ -51,5 +51,10 @@ public class CompositionSampler implements MutantSamplingStrategy{
 				.collect(Collectors.toList());
 		return String.join("*", innerDescription);
 	}
+	@Override
+	public void updateSeed(long seed) {
+		for(MutantSamplingStrategy s : sampler)
+			s.updateSeed(seed);
+	}
 
 }

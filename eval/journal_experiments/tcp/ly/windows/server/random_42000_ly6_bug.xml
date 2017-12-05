@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tcp.ly.windows.server</experimentName>
+    <generationDuration>65565</generationDuration>
+    <generationDurations>10575,9282,8938,8944,9761,9924,8141</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>1</mutationDuration>
+    <mutationDurations>0,0,0,0,0,1,0</mutationDurations>
+    <nrCorrectRuns>6</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>59493,44266,43709,47383,52383,44224,42569</resetsEq>
+    <resetsEqSum>334027</resetsEqSum>
+    <resetsMq>6968,6474,6968,6470,6971,7958,6128</resetsMq>
+    <resetsMqSum>47937</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>222</selectionDuration>
+    <selectionDurations>39,29,35,27,30,29,33</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>740972,548341,539680,597724,647797,549045,518819</stepsEq>
+    <stepsEqSum>4142378</stepsEqSum>
+    <stepsMq>77711,81262,70100,66749,73596,85256,61540</stepsMq>
+    <stepsMqSum>516214</stepsMqSum>
+    <testSelectionSuite>60000</testSelectionSuite>
+    <testSuiteSize>42000</testSuiteSize>
+    <traceGenConfig>adapted-lee-yannakakis(exp-len=6,prefix-strategy=buggy)</traceGenConfig>
+</eval-statistics>

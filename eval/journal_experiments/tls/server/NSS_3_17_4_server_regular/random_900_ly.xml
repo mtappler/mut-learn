@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.NSS_3_17_4_server_regular</experimentName>
+    <generationDuration>7216</generationDuration>
+    <generationDurations>218,176,186,183,189,227,181,221,180,189,215,181,191,183,184,173,180,186,186,182,218,173,149,181,184,184,183,197,188,203,197,142,216,142,183,184,170,178,133</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>3</mutationDuration>
+    <mutationDurations>0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</mutationDurations>
+    <nrCorrectRuns>38</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>1338,1309,1340,1028,1584,1570,1517,1043,1525,1077,1264,1503,1681,1887,1141,1412,1143,1267,1201,1071,1212,1029,925,1414,999,1084,939,1184,967,1031,1354,1137,1157,992,1113,1157,1089,1149,1004</resetsEq>
+    <resetsEqSum>47837</resetsEqSum>
+    <resetsMq>394,329,328,328,328,395,328,396,328,328,395,328,328,328,328,329,328,328,328,329,394,328,263,328,329,329,329,328,328,329,328,262,395,262,329,328,329,328,166</resetsMq>
+    <resetsMqSum>12843</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>41</selectionDuration>
+    <selectionDurations>0,0,2,1,1,1,2,0,1,1,2,1,1,1,1,2,1,0,2,2,3,1,0,0,0,1,0,2,1,0,0,2,2,0,2,1,1,2,1</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>8002,7445,7516,5945,9060,8595,9004,6402,8710,6483,7410,8631,9149,10689,6648,8279,6746,7154,6729,6347,7036,6024,5456,7898,6210,6484,5802,6909,5855,6194,7621,6591,6852,5959,6638,6798,6505,6647,5164</stepsEq>
+    <stepsEqSum>277587</stepsEqSum>
+    <stepsMq>1599,1269,1269,1270,1266,1537,1269,1539,1269,1333,1536,1270,1269,1269,1265,1269,1268,1268,1332,1267,1602,1331,1069,1267,1267,1270,1267,1269,1267,1268,1332,1065,1537,1065,1269,1270,1269,1267,448</stepsMq>
+    <stepsMqSum>50032</stepsMqSum>
+    <testSelectionSuite>5000</testSelectionSuite>
+    <testSuiteSize>900</testSuiteSize>
+    <traceGenConfig>adapted-lee-yannakakis(exp-len=3,prefix-strategy=minimal)</traceGenConfig>
+</eval-statistics>

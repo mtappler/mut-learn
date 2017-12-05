@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.NSS_3_17_4_server_regular</experimentName>
+    <generationDuration>882</generationDuration>
+    <generationDurations>229,173,184,188,108</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>1</mutationDuration>
+    <mutationDurations>0,0,0,1,0</mutationDurations>
+    <nrCorrectRuns>4</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>1038,1009,1040,728,640</resetsEq>
+    <resetsEqSum>4455</resetsEqSum>
+    <resetsMq>394,329,328,328,124</resetsMq>
+    <resetsMqSum>1503</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>5</selectionDuration>
+    <selectionDurations>1,1,2,1,0</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>6077,5584,5614,4092,3231</stepsEq>
+    <stepsEqSum>24598</stepsEqSum>
+    <stepsMq>1599,1269,1269,1270,324</stepsMq>
+    <stepsMqSum>5731</stepsMqSum>
+    <testSelectionSuite>5000</testSelectionSuite>
+    <testSuiteSize>600</testSuiteSize>
+    <traceGenConfig>adapted-lee-yannakakis(exp-len=3,prefix-strategy=minimal)</traceGenConfig>
+</eval-statistics>

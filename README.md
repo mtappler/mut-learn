@@ -28,7 +28,7 @@ Generally, Maven should take care of most of the external dependencies but if yo
 * Apache Commons Lang 3.4 
 
 One test-case generator (in the class `AdaptedLeeYannakakisGenerator`), however, has an external dependency to the Yannakakis test-case generator implemented by Joshua Moerman
-which can be found at https://gitlab.science.ru.nl/moerman/Yannakakis. So if you want to use this test-case generator you have download the C++ code from the external repository
+which can be found at https://gitlab.science.ru.nl/moerman/Yannakakis. So if you want to use this test-case generator you have to download the C++ code from the external repository
 and build it.
 
 As noted above, Graphviz dot-files can be loaded as SULs. However, they should be given in the syntax used by LearnLib 0.12.

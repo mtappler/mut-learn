@@ -81,5 +81,9 @@ public class ElementBasedBoundSampler implements MutantSamplingStrategy{
 	public String description() {
 		return String.format("element-based(bound=%d,kind=%s)",bound,kind);
 	}
+	@Override
+	public void updateSeed(long seed) {
+		randGen = new Random(seed);
+	}
 
 }

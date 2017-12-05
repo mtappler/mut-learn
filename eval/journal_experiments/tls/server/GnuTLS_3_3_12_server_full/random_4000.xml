@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.GnuTLS_3_3_12_server_full</experimentName>
+    <generationDuration>8957</generationDuration>
+    <generationDurations>237,207,172,210,228,263,255,238,209,159,198,170,162,195,196,245,199,280,165,198,236,163,238,195,204,157,198,227,238,160,278,209,238,236,200,242,197,158,239,163,239,158,198</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>2</mutationDuration>
+    <mutationDurations>0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0</mutationDurations>
+    <nrCorrectRuns>42</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>4682,5046,5964,4836,7618,8131,4715,4533,4881,5181,5259,6331,5168,6815,5873,4274,5812,5621,4322,4826,5812,4599,8606,4291,5257,4923,4804,4455,5764,4649,4569,4677,4806,4287,4248,7793,6263,7398,4683,4622,4697,5548,4573</resetsEq>
+    <resetsEqSum>231212</resetsEqSum>
+    <resetsMq>548,550,438,548,551,661,662,661,549,440,550,439,439,549,550,660,548,773,439,551,662,438,661,548,551,440,548,549,660,439,770,550,659,661,549,661,549,441,660,439,660,439,490</resetsMq>
+    <resetsMqSum>24130</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>745</selectionDuration>
+    <selectionDurations>21,16,16,16,17,22,23,21,17,15,15,14,13,18,16,18,16,22,14,16,20,17,20,18,19,13,17,17,20,13,23,16,20,20,15,21,17,12,18,13,19,15,16</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>94553,100486,120441,96985,152389,162662,93997,91030,97413,103255,104649,126301,105302,136905,117037,85036,116178,111745,85623,96028,116162,91527,172841,85726,105318,98659,95050,88354,115270,92713,90646,94637,96688,87129,83920,157007,126025,148814,92914,92965,93307,109637,90919</stepsEq>
+    <stepsEqSum>4624243</stepsEqSum>
+    <stepsMq>2173,2181,1848,2283,2184,2618,2840,2618,2175,1856,2182,1853,1740,2175,2180,2724,2173,3170,1742,2185,2622,1739,2727,2172,2183,1748,2173,2285,2613,1741,3047,2178,2613,2728,2176,2616,2176,1860,2725,1743,2724,1853,1839</stepsMq>
+    <stepsMqSum>97181</stepsMqSum>
+    <testSelectionSuite>100000</testSelectionSuite>
+    <testSuiteSize>4000</testSuiteSize>
+    <traceGenConfig>rand-word(len=40)</traceGenConfig>
+</eval-statistics>

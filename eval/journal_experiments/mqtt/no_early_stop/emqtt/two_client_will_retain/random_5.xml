@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>mqtt.emqtt.two_client_will_retain</experimentName>
+    <generationDuration>1247</generationDuration>
+    <generationDurations>33,20,90,33,51,37,28,16,14,35,21,10,14,12,17,35,20,29,13,34,16,26,20,28,32,11,10,11,32,20,24,19,14,30,33,15,11,14,23,33,26,30,42,26,24,28,27,15,20,25</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>26</mutationDuration>
+    <mutationDurations>1,0,3,7,2,0,0,0,0,1,0,1,0,0,0,1,1,0,1,1,0,0,0,0,1,0,0,0,1,0,0,2,0,0,0,0,0,0,1,0,1,0,0,0,0,1,0,0,0,0</mutationDurations>
+    <nrCorrectRuns>1</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>8,7,18,11,19,10,11,7,11,25,8,6,6,6,8,13,7,14,11,12,7,11,8,15,12,6,6,6,9,9,10,14,7,20,13,9,6,10,10,17,16,14,24,18,11,12,15,7,8,13</resetsEq>
+    <resetsEqSum>561</resetsEqSum>
+    <resetsMq>334,110,844,301,911,518,303,172,170,911,375,92,92,74,332,513,225,615,196,227,195,559,373,465,888,74,94,111,605,446,336,373,169,829,374,169,74,225,409,778,556,620,1332,650,373,559,723,168,481,605</resetsMq>
+    <resetsMqSum>20928</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>113</selectionDuration>
+    <selectionDurations>8,5,9,3,6,2,3,0,2,2,4,1,2,0,1,2,1,2,2,1,0,1,4,3,3,0,2,2,3,0,1,1,1,3,2,0,2,1,3,2,1,2,5,3,2,2,2,1,3,2</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>72,87,287,211,430,183,220,136,200,551,194,71,74,60,146,323,158,197,184,173,154,207,141,196,239,130,93,81,175,217,199,153,101,390,263,139,89,172,172,306,300,255,546,290,224,162,302,144,148,195</stepsEq>
+    <stepsEqSum>10140</stepsEqSum>
+    <stepsMq>2267,326,5128,1512,6892,3715,1219,604,659,6178,1951,263,263,182,2794,2693,1228,2950,732,794,759,4251,2135,3119,5625,182,268,328,4572,3801,1788,3279,592,5789,1825,528,182,1587,2357,4938,4106,2748,9827,3780,2164,3212,7650,525,3315,4559</stepsMq>
+    <stepsMqSum>132141</stepsMqSum>
+    <testSelectionSuite>10000</testSelectionSuite>
+    <testSuiteSize>5</testSuiteSize>
+    <traceGenConfig>rand-word(len=50)</traceGenConfig>
+</eval-statistics>

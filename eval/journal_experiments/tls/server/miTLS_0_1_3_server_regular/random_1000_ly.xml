@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.miTLS_0_1_3_server_regular</experimentName>
+    <generationDuration>6543</generationDuration>
+    <generationDurations>119,123,122,122,124,130,122,134,92,158,129,90,158,169,123,130,135,132,128,129,130,126,128,130,137,126,133,130,155,139,137,123,129,128,93,133,128,125,166,132,132,121,156,137,162,124,101,129,160,124</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>3</mutationDuration>
+    <mutationDurations>0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</mutationDurations>
+    <nrCorrectRuns>50</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>1146,1184,1115,1132,1223,1122,1159,1086,1093,1323,1735,1013,1188,1263,1255,1038,1047,1394,1376,1119,1034,1134,1190,1225,1104,1110,1064,1070,1515,1571,1095,1100,1114,1088,1076,1038,1135,1208,1106,1263,1084,1077,1372,1073,1076,1060,1111,1115,1665,1338</resetsEq>
+    <resetsEqSum>59222</resetsEqSum>
+    <resetsMq>198,198,198,198,198,199,198,198,148,248,199,148,248,248,198,198,198,198,198,198,198,198,199,198,198,199,199,199,248,200,198,198,198,200,149,198,199,198,249,198,199,198,248,198,249,199,148,199,248,198</resetsMq>
+    <resetsMqSum>10117</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>50</selectionDuration>
+    <selectionDurations>2,2,2,1,1,0,1,0,0,0,2,0,0,2,0,0,1,0,0,0,1,1,1,2,1,1,1,0,3,1,0,1,0,0,1,2,0,1,2,2,1,2,2,1,1,2,0,2,2,2</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>6734,6661,6265,6345,7071,6184,6744,6221,6446,7475,9611,5756,6522,7091,6987,5985,6085,7603,7233,6408,5974,6351,6476,6641,6359,6409,6076,6075,8271,8668,6167,6294,6447,6179,6241,6043,6418,6639,6454,7121,6122,6300,7598,6409,6177,6091,6340,6409,9245,7237</stepsEq>
+    <stepsEqSum>334658</stepsEqSum>
+    <stepsMq>695,695,697,695,696,697,697,695,509,882,697,509,882,881,696,694,696,694,694,695,694,695,697,695,694,698,697,697,880,699,694,694,695,700,511,694,697,695,884,694,699,695,881,695,885,698,509,697,883,695</stepsMq>
+    <stepsMqSum>35537</stepsMqSum>
+    <testSelectionSuite>5000</testSelectionSuite>
+    <testSuiteSize>1000</testSuiteSize>
+    <traceGenConfig>adapted-lee-yannakakis(exp-len=3,prefix-strategy=minimal)</traceGenConfig>
+</eval-statistics>

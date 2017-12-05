@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.NSS_3_17_4_server_regular</experimentName>
+    <generationDuration>197711</generationDuration>
+    <generationDurations>11043,10428,10629,11350,10813,10637,10121,13816,10304,10802,11172,9805,10812,12237,11983,10996,11400,9363</generationDurations>
+    <mutOpConfig>split-state(acc-seq=300, depth=1, diff-last=true, allow-equal-pre=true)_change-output</mutOpConfig>
+    <mutationDuration>524</mutationDuration>
+    <mutationDurations>17,18,37,19,107,26,22,22,27,22,42,40,17,35,26,13,22,12</mutationDurations>
+    <nrCorrectRuns>17</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>160,175,218,180,183,212,179,194,179,169,239,136,169,163,165,192,145,135</resetsEq>
+    <resetsEqSum>3193</resetsEqSum>
+    <resetsMq>328,328,328,330,328,328,328,395,328,328,329,262,329,395,328,328,328,167</resetsMq>
+    <resetsMqSum>5815</resetsMqSum>
+    <sampleConfig>reduce-to-mean(kind=split-state-state)*element-based(fraction=1/(2^1.000000),kind=operator:split-state-1)</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>254162</selectionDuration>
+    <selectionDurations>15880,12967,14785,14148,12907,12057,12513,18303,15549,13610,12885,11760,12064,17949,14172,12418,14485,15710</selectionDurations>
+    <shortMutOpConfig>split-state_1_change-output</shortMutOpConfig>
+    <stepsEq>2185,2695,3188,2543,2810,3149,2611,2889,2711,2449,3274,1972,2466,2436,2384,2840,2108,2083</stepsEq>
+    <stepsEqSum>46793</stepsEqSum>
+    <stepsMq>1269,1269,1268,1275,1270,1270,1268,1534,1267,1265,1270,1065,1269,1533,1267,1270,1268,449</stepsMq>
+    <stepsMqSum>22346</stepsMqSum>
+    <testSelectionSuite>300000</testSelectionSuite>
+    <testSuiteSize>100</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:20, restart-prob:0.950000, stop-prob:0.050000, rand-word:3)</traceGenConfig>
+</eval-statistics>

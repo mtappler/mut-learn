@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.even_shorter.OpenSSL_1_0_1j_server_regular</experimentName>
+    <generationDuration>175419</generationDuration>
+    <generationDurations>4035,3475,3464,3550,2864,3435,3318,3493,2902,3642,3475,4086,3397,2856,3981,3515,4235,4171,3871,3051,4131,3916,4179,3595,4151,2935,3043,3459,2849,3450,3452,4044,2910,3439,3515,3433,3452,2904,3497,4277,2938,2315,3420,4043,3455,2803,3469,4085,3954,3490</generationDurations>
+    <mutOpConfig>split-state(acc-seq=300, depth=1, diff-last=true, allow-equal-pre=true)_change-output</mutOpConfig>
+    <mutationDuration>339</mutationDuration>
+    <mutationDurations>7,5,10,9,5,5,7,7,6,5,7,7,8,3,7,6,7,11,9,6,7,7,9,5,10,6,3,5,6,6,7,6,5,7,6,6,6,6,7,13,7,4,6,7,8,5,8,9,9,6</mutationDurations>
+    <nrCorrectRuns>50</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>565,525,711,525,518,525,536,556,524,519,514,555,513,514,542,791,534,515,518,515,537,521,530,645,517,549,511,518,530,743,533,1043,529,524,890,542,520,596,565,539,527,524,832,650,529,511,555,549,510,514</resetsEq>
+    <resetsEqSum>28598</resetsEqSum>
+    <resetsMq>555,473,476,477,396,474,473,477,395,476,475,555,476,395,552,476,555,476,476,395,555,475,557,473,556,396,396,475,396,473,474,554,395,475,475,475,476,394,478,556,396,316,475,556,474,395,477,555,475,474</resetsMq>
+    <resetsMqSum>23600</resetsMqSum>
+    <sampleConfig>reduce-to-mean(kind=split-state-state)*element-based(fraction=1/(2^1.000000),kind=operator:split-state-1)</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>214283</selectionDuration>
+    <selectionDurations>5104,4029,3875,4351,3288,4506,4492,4464,3687,4500,3788,4445,4335,3562,4531,4022,4712,5330,5008,4935,4610,4770,4996,3907,5260,3865,4258,4688,4077,3994,3938,4025,3559,4146,3393,3937,4965,4510,4295,4754,3645,3190,4151,4586,4274,4375,4041,4395,4591,4124</selectionDurations>
+    <shortMutOpConfig>split-state_1_change-output</shortMutOpConfig>
+    <stepsEq>5508,5198,6709,5168,5078,5171,5227,5301,5173,5237,5158,5613,4955,5010,5188,7445,5346,5146,5110,5028,5297,5226,5336,6017,5224,5307,5021,5044,5223,7003,5284,9382,5192,5213,8658,5331,5177,5831,5632,5389,5250,5089,7858,6190,5078,4995,5378,5392,5038,5125</stepsEq>
+    <stepsEqSum>278949</stepsEqSum>
+    <stepsMq>2390,2276,2206,2292,1941,2125,2119,2212,1943,2134,2203,2626,2450,1859,2458,2048,2545,2134,2287,2018,2627,2124,2480,2118,2473,1943,1861,2279,1863,2038,2204,2386,1858,2282,2366,2202,2127,1698,2136,2559,1786,1605,2282,2478,2201,1858,2131,2709,2285,2279</stepsMq>
+    <stepsMqSum>109504</stepsMqSum>
+    <testSelectionSuite>300000</testSelectionSuite>
+    <testSuiteSize>500</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:10, restart-prob:0.950000, stop-prob:0.050000, rand-word:3)</traceGenConfig>
+</eval-statistics>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.OpenSSL_1_0_2_server_regular</experimentName>
+    <generationDuration>1435</generationDuration>
+    <generationDurations>237,237,197,206,201,198,159</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>0</mutationDuration>
+    <mutationDurations>0,0,0,0,0,0,0</mutationDurations>
+    <nrCorrectRuns>6</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>7988,9483,4686,7971,5081,5010,4517</resetsEq>
+    <resetsEqSum>44736</resetsEqSum>
+    <resetsMq>305,306,253,253,256,256,175</resetsMq>
+    <resetsMqSum>1804</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>113</selectionDuration>
+    <selectionDurations>20,19,16,15,15,16,12</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>161959,190105,93869,160341,101786,99890,90864</stepsEq>
+    <stepsEqSum>898814</stepsEqSum>
+    <stepsMq>1108,1164,871,871,931,881,528</stepsMq>
+    <stepsMqSum>6354</stepsMqSum>
+    <testSelectionSuite>100000</testSelectionSuite>
+    <testSuiteSize>4500</testSuiteSize>
+    <traceGenConfig>rand-word(len=40)</traceGenConfig>
+</eval-statistics>

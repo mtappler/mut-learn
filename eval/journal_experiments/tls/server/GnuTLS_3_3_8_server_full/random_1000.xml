@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.GnuTLS_3_3_8_server_full</experimentName>
+    <generationDuration>307</generationDuration>
+    <generationDurations>307</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>1</mutationDuration>
+    <mutationDurations>1</mutationDurations>
+    <nrCorrectRuns>0</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>2524</resetsEq>
+    <resetsEqSum>2524</resetsEqSum>
+    <resetsMq>807</resetsMq>
+    <resetsMqSum>807</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>27</selectionDuration>
+    <selectionDurations>27</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>50904</stepsEq>
+    <stepsEqSum>50904</stepsEqSum>
+    <stepsMq>3471</stepsMq>
+    <stepsMqSum>3471</stepsMqSum>
+    <testSelectionSuite>100000</testSelectionSuite>
+    <testSuiteSize>1000</testSuiteSize>
+    <traceGenConfig>rand-word(len=40)</traceGenConfig>
+</eval-statistics>

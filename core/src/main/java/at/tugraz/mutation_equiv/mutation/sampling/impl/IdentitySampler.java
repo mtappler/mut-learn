@@ -37,4 +37,9 @@ public class IdentitySampler implements MutantSamplingStrategy {
 	public String description(){
 		return "identity";
 	}
+
+	@Override
+	public void updateSeed(long seed) {
+		
+	}
 }

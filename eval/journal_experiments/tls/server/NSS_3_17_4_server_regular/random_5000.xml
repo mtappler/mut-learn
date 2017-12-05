@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.NSS_3_17_4_server_regular</experimentName>
+    <generationDuration>138</generationDuration>
+    <generationDurations>138</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>0</mutationDuration>
+    <mutationDurations>0</mutationDurations>
+    <nrCorrectRuns>0</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>8349</resetsEq>
+    <resetsEqSum>8349</resetsEqSum>
+    <resetsMq>198</resetsMq>
+    <resetsMqSum>198</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>12</selectionDuration>
+    <selectionDurations>12</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>166176</stepsEq>
+    <stepsEqSum>166176</stepsEqSum>
+    <stepsMq>600</stepsMq>
+    <stepsMqSum>600</stepsMqSum>
+    <testSelectionSuite>100000</testSelectionSuite>
+    <testSuiteSize>5000</testSuiteSize>
+    <traceGenConfig>rand-word(len=40)</traceGenConfig>
+</eval-statistics>

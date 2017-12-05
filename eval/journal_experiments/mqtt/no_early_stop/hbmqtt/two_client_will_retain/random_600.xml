@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>mqtt.hbmqtt.two_client_will_retain</experimentName>
+    <generationDuration>28388</generationDuration>
+    <generationDurations>398,463,437,486,365,537,712,667,550,561,527,508,366,766,545,723,450,703,670,715,554,548,579,710,402,514,517,238,822,530,625,505,594,717,452,666,455,616,565,492,374,750,742,705,723,472,470,621,748,533</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>9</mutationDuration>
+    <mutationDurations>0,1,0,0,0,0,0,1,0,0,0,0,2,0,0,0,1,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0</mutationDurations>
+    <nrCorrectRuns>38</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>621,717,661,879,649,809,693,827,722,642,711,683,684,876,960,943,860,922,605,858,613,785,759,822,851,607,1157,605,930,867,790,639,672,1034,624,625,785,907,740,729,823,669,1029,945,730,614,951,926,703,623</resetsEq>
+    <resetsEqSum>38876</resetsEqSum>
+    <resetsMq>741,1100,887,1257,944,1038,1041,1096,940,1100,1257,1097,1098,1414,782,1035,943,1260,941,1101,738,784,945,1034,885,739,943,625,1419,1100,1037,940,941,1099,1096,942,1099,1185,1100,1101,942,1259,1101,1099,1257,944,1097,1095,1097,738</resetsMq>
+    <resetsMqSum>51453</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>2486</selectionDuration>
+    <selectionDurations>50,54,37,35,30,30,34,43,78,26,33,51,28,67,49,89,47,49,62,68,54,56,47,58,32,42,50,29,63,61,80,55,25,50,38,71,38,33,73,40,57,59,49,85,65,27,46,38,51,54</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>15948,17130,16670,21940,16116,20300,17613,20875,17428,15628,17882,17217,16148,21432,24414,23496,21362,22840,15241,21439,15236,19814,18800,20417,21190,15257,29654,15106,23483,22184,19742,15396,17057,25639,16363,16029,18961,22828,18509,18274,20213,16864,26258,23645,17744,15589,23903,22702,17090,14947</stepsEq>
+    <stepsEqSum>970013</stepsEqSum>
+    <stepsMq>4823,7820,6558,10749,8091,7660,8400,6818,10196,10463,10388,9050,8276,12669,7154,7016,7103,8859,5970,7986,5102,6680,8387,8345,5884,7329,8209,4855,10835,10325,8229,6157,7099,7819,9188,7102,8777,8882,9083,9407,8670,8351,12077,8713,9600,8548,10122,8862,7475,4058</stepsMq>
+    <stepsMqSum>410219</stepsMqSum>
+    <testSelectionSuite>60000</testSelectionSuite>
+    <testSuiteSize>600</testSuiteSize>
+    <traceGenConfig>rand-word(len=50)</traceGenConfig>
+</eval-statistics>

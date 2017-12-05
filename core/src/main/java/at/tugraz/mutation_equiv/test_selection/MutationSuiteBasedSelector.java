@@ -17,6 +17,7 @@
  *******************************************************************************/
 package at.tugraz.mutation_equiv.test_selection;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
@@ -29,6 +30,7 @@ import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.Pair;
 
 import at.tugraz.mutation_equiv.MutationTestCase;
+import at.tugraz.mutation_equiv.mutation.sampling.MutantProducer;
 import net.automatalib.automata.transout.MealyMachine;
 import net.automatalib.words.Alphabet;
 import net.automatalib.words.impl.Symbol;
@@ -36,10 +38,9 @@ import net.automatalib.words.impl.Symbol;
 /**
  * Mutation-based test-case selection is discussed in the paper.
  * 
- * Consists of three steps:
- *  * Greedily select tests such that all mutant are covered
- *  * optionally generate tests killing mutants which have not yet been covered
- *  * selects tests which individually achieve high coverage
+ * Consists of three steps: * Greedily select tests such that all mutant are
+ * covered * optionally generate tests killing mutants which have not yet been
+ * covered * selects tests which individually achieve high coverage
  * 
  * @author Martin Tappler
  *
@@ -50,141 +51,169 @@ public class MutationSuiteBasedSelector extends AbstractMutationTestSelector {
 
 		private int testSuiteSize = 0;
 		private int providedTests = 0;
-		private Set<Integer> mutantIndexes;
+		// private Set<Integer> mutantIndexes;
+		private boolean[] aliveMutants = null;
 		private List<MutationTestCase> tests;
 		private boolean noMoreKillsPossible = false;
-		private Map<Integer, MealyMachine<Object, Symbol, Object, String>> mutantsWithIndexes;
+		private Map<Integer, MutantProducer> mutantsWithIndexes;
 		private boolean killAliveMutants;
 		private Iterator<MutationTestCase> remainingIterator = null;
 		private MutationSuiteBasedSelector sel = null;
 		private List<MutationTestCase> additionalTestsForAlive = null;
 
 		// don't instantiate from "outside"
-		private LazyMutationBasedSelector(int testSuiteSize, 
-				Map<Integer, MealyMachine<Object, Symbol, Object, String>> mutantsWithIndexes, 
-				List<MutationTestCase> tests, boolean killAliveMutants, MutationSuiteBasedSelector sel){
+		private LazyMutationBasedSelector(int testSuiteSize, Map<Integer, MutantProducer> mutantsWithIndexes,
+				List<MutationTestCase> tests, boolean killAliveMutants, MutationSuiteBasedSelector sel) {
 			this.testSuiteSize = testSuiteSize;
-			this.mutantIndexes = new HashSet<>(mutantsWithIndexes.keySet());
+			// this.mutantIndexes = new HashSet<>(mutantsWithIndexes.keySet());
+			this.aliveMutants = convertToBooleanArray(mutantsWithIndexes.keySet());
 			this.mutantsWithIndexes = mutantsWithIndexes;
 			this.tests = tests;
-			// TODO test kill alive mutants (old version was tested)
 			this.killAliveMutants = killAliveMutants;
-			this.sel  = sel;
+			this.sel = sel;
 		}
+
+		private boolean[] convertToBooleanArray(Set<Integer> mutantIndexes) {
+			List<Integer> indexList = mutantIndexes.stream().sorted().collect(Collectors.toList());
+			boolean[] aliveMuts = new boolean[indexList.get(indexList.size()-1)+1];
+			for(Integer i : indexList){
+				aliveMuts[i] = true;
+			}
+//			for (int i = 0; i < aliveMuts.length; i++)
+//				aliveMuts[i] = true;
+			return aliveMuts;
+		}
+
 		@Override
 		public boolean hasNext() {
-			return providedTests < testSuiteSize;
+			return providedTests < testSuiteSize
+					|| killAliveMutants && (additionalTestsForAlive == null || !additionalTestsForAlive.isEmpty());
 		}
 
 		@Override
 		public List<Symbol> next() {
-			if(!noMoreKillsPossible && !mutantIndexes.isEmpty() && providedTests < testSuiteSize){
-				MutationTestCase bestTest = findTestWithMostKills(mutantIndexes,tests);
-				if(bestTest == null){
+			if (!noMoreKillsPossible && providedTests < testSuiteSize) {
+				MutationTestCase bestTest = findTestWithMostKills(tests);
+				if (bestTest == null) {
 					noMoreKillsPossible = true;
-					System.out.println("Combined mutation score of " + providedTests + 
-							": " + (double)(mutantsWithIndexes.size() - mutantIndexes.size()) 
-							/ mutantsWithIndexes.size());
-				}
-				else {
-					providedTests ++;
+					// System.out.println("Combined mutation score of " +
+					// providedTests + ": "
+					// + (double) (mutantsWithIndexes.size() -
+					// mutantIndexes.size()) / mutantsWithIndexes.size());
+				} else {
+					providedTests++;
 					tests.remove(bestTest);
 					return bestTest.getTrace();
 				}
 			}
-			if(!mutantIndexes.isEmpty() && killAliveMutants){
-				if(additionalTestsForAlive == null){
-						List<Pair<Integer, MealyMachine<Object, Symbol, Object, String>>> aliveMutants = 
-								mutantsWithIndexes.entrySet().stream()
-						.filter(mwi -> mutantIndexes.contains(mwi.getKey()))
-						.map(entry -> new ImmutablePair<>(entry.getKey(), entry.getValue()))
-						.collect(Collectors.toList());
+			if (killAliveMutants && !hasAliveMutans()) {
+				if (additionalTestsForAlive == null) {
+					Set<Integer> mutantIndexes = new HashSet<>();
+					for(int i = 0; i < aliveMutants.length; i++){
+						if(aliveMutants[i]){
+							mutantIndexes.add(i);
+						}
+					}
+					List<Pair<Integer, MealyMachine<Object, Symbol, Object, String>>> aliveMutants = mutantsWithIndexes
+							.entrySet().stream().filter(mwi -> mutantIndexes.contains(mwi.getKey()))
+							.map(entry -> new ImmutablePair<>(entry.getKey(), entry.getValue().get()))
+							.collect(Collectors.toList());
 
-						additionalTestsForAlive = sel.killMutants(aliveMutants,mutantIndexes);
-						System.out.println("Have " + additionalTestsForAlive.size() + " additional tests");
+					additionalTestsForAlive = sel.killMutants(aliveMutants, mutantIndexes);
+					System.out.println("Have " + additionalTestsForAlive.size() + " additional tests");
 				}
-
-				providedTests ++;
+			}
+			if (additionalTestsForAlive != null && !additionalTestsForAlive.isEmpty()) {
+				providedTests++;
 				return additionalTestsForAlive.remove(0).getTrace();
 			}
-			if(providedTests < testSuiteSize){
-				if(remainingIterator == null){
+			if (providedTests < testSuiteSize) {
+				if (remainingIterator == null) {
 					remainingIterator = tests.stream()
-					.sorted((o1, o2) -> o1.score < o2.score ? 1 : o1.score > o2.score ? -1 : 0)
-					.limit(testSuiteSize - providedTests).iterator();
+							.sorted((o1, o2) -> o1.score < o2.score ? 1 : o1.score > o2.score ? -1 : 0)
+							.limit(testSuiteSize - providedTests).iterator();
 				}
-				providedTests ++;
+				providedTests++;
 				return remainingIterator.next().getTrace();
 			}
-			
+
 			throw new NoSuchElementException();
 		}
-		
 
-		private MutationTestCase findTestWithMostKills(Set<Integer> mutantIndexes, List<MutationTestCase> mutationTests) {
-			
+		private boolean hasAliveMutans() {
+			for (boolean m : aliveMutants){
+				if (m)
+					return true;
+			}
+			return false;
+		}
+
+		private MutationTestCase findTestWithMostKills(List<MutationTestCase> mutationTests) {
+
 			int highestKillCount = 0;
 			MutationTestCase bestTest = null;
-			for(MutationTestCase t : mutationTests){
+			for (MutationTestCase t : mutationTests) {
 				int nrKilled = 0;
-				for(int killed : t.killedMutants){
-					if(mutantIndexes.contains(killed))
-						nrKilled ++;
+				for (int killed : t.killedMutants) {					
+					if (aliveMutants[killed] == true)
+						nrKilled++;
 				}
-				if(nrKilled > highestKillCount){
+				if (nrKilled > highestKillCount) {
 					highestKillCount = nrKilled;
 					bestTest = t;
 				}
+				// else if (nrKilled == highestKillCount && largestLengthOfBest
+				// < t.trace.size()) {
+				// highestKillCount = nrKilled;
+				// largestLengthOfBest = t.trace.size();
+				// bestTest = t;
+				// }
 			}
-			if(bestTest != null){
-				for(int i : bestTest.killedMutants)
-					mutantIndexes.remove(i);
+			if (bestTest != null) {
+				for (int i : bestTest.killedMutants)
+					aliveMutants[i] = false;
 			}
 			return bestTest;
 		}
-		
+
 	}
 
 	public MutationSuiteBasedSelector(int testSuiteSize, Alphabet<Symbol> inputAlphabet, boolean killAliveMutants) {
-		super(testSuiteSize,inputAlphabet);
+		this(testSuiteSize, inputAlphabet, killAliveMutants, false);
+	}
+
+	public MutationSuiteBasedSelector(int testSuiteSize, Alphabet<Symbol> inputAlphabet, boolean killAliveMutants,
+			boolean useNfaBasedOptimization) {
+		super(testSuiteSize, inputAlphabet);
 		this.setKillAliveMutants(killAliveMutants);
+		this.setUseNfaBasedOptimization(useNfaBasedOptimization);
 	}
 
 	private boolean killAliveMutants = false;
-	
+
 	@Override
 	public Iterator<List<Symbol>> select(List<MutationTestCase> tests) {
 		int effectiveTestSuiteSize = testSuiteSize;
-		if(!initialSizes.isEmpty()){
+		if (!initialSizes.isEmpty()) {
 			effectiveTestSuiteSize = initialSizes.remove(0);
 		}
-		if(!mutantsWithIndexes.isEmpty()){
-			LazyMutationBasedSelector actualSelector = 
-					new LazyMutationBasedSelector(effectiveTestSuiteSize,mutantsWithIndexes,tests, 
-							killAliveMutants, this);		
+		if (!mutantsWithIndexes.isEmpty()) {
+			LazyMutationBasedSelector actualSelector = new LazyMutationBasedSelector(effectiveTestSuiteSize,
+					mutantsWithIndexes, tests, killAliveMutants, this);
 			return actualSelector;
 		} else {
 			return tests.stream().map(MutationTestCase::getTrace).limit(effectiveTestSuiteSize).iterator();
 		}
 	}
-	
-
-
-
-
 
 	@Override
 	public String description() {
 		return "mutation-suite-based" + (killAliveMutants ? "-ka" : "");
 	}
 
-
-
 	public boolean isKillAliveMutants() {
 		return killAliveMutants;
 	}
-
-
 
 	public void setKillAliveMutants(boolean killAliveMutants) {
 		this.killAliveMutants = killAliveMutants;

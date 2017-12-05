@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * A mutant sample consisting of other samples. 
+ * A mutant sample consisting of other samples.
  * 
  * @author Martin Tappler
  *
@@ -30,19 +30,21 @@ import java.util.stream.Collectors;
 public class CompoundSample implements MutantSample {
 
 	private String kind = "none";
+
 	public CompoundSample(String kind) {
 		super();
 		this.kind = kind;
 	}
 
 	private List<MutantSample> children = new ArrayList<>();
-	public void addChild(MutantSample child){
+
+	public void addChild(MutantSample child) {
 		children.add(child);
 	}
+
 	@Override
 	public List<MutantProducer> getMutants() {
-		return children.stream().flatMap(c -> 
-		c.getMutants().stream()).collect(Collectors.toList());
+		return children.stream().flatMap(c -> c.getMutants().stream()).collect(Collectors.toList());
 	}
 
 	@Override

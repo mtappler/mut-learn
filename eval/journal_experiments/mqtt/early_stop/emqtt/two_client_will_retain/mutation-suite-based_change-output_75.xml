@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>mqtt.emqtt.two_client_will_retain</experimentName>
+    <generationDuration>71778</generationDuration>
+    <generationDurations>3252,2612,3743,3603,2954,3409,3879,3852,2641,3900,3191,3237,3269,3970,3662,2929,3937,3370,3179,3553,3636</generationDurations>
+    <mutOpConfig>change-output</mutOpConfig>
+    <mutationDuration>39</mutationDuration>
+    <mutationDurations>0,2,5,3,4,1,4,2,2,1,3,1,1,2,1,1,0,1,3,0,2</mutationDurations>
+    <nrCorrectRuns>20</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>115,86,110,121,135,87,117,149,100,108,89,131,106,157,92,82,110,105,113,116,147</resetsEq>
+    <resetsEqSum>2376</resetsEqSum>
+    <resetsMq>1503,1160,1665,1666,1333,1331,1667,1667,1162,1671,1331,1498,1498,1835,1667,1330,1669,1501,1495,1670,1581</resetsMq>
+    <resetsMqSum>31900</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>39742</selectionDuration>
+    <selectionDurations>1799,1397,2100,1930,1651,1658,2203,2131,1473,2146,1722,1708,1773,2371,2107,1739,2195,1806,1836,1944,2053</selectionDurations>
+    <shortMutOpConfig>change-output</shortMutOpConfig>
+    <stepsEq>5345,3925,4973,5553,6285,3925,5308,6888,4570,5003,4059,5994,4818,7199,4169,3748,4985,4804,5133,5280,6818</stepsEq>
+    <stepsEqSum>108782</stepsEqSum>
+    <stepsMq>11551,10065,13093,12837,9853,11882,13147,13715,10118,12379,10370,11506,11486,14511,12199,9553,16196,12516,11104,15052,12066</stepsMq>
+    <stepsMqSum>255199</stepsMqSum>
+    <testSelectionSuite>50000</testSelectionSuite>
+    <testSuiteSize>75</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:40, restart-prob:0.950000, stop-prob:0.050000, rand-word:6)</traceGenConfig>
+</eval-statistics>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tcp.bsd.server</experimentName>
+    <generationDuration>1108272</generationDuration>
+    <generationDurations>75995,57435,72917,54382,52494,47440,57883,50614,59675,53172,59225,62518,59365,57152,54493,58015,51075,56312,68110</generationDurations>
+    <mutOpConfig>split-state(acc-seq=100, depth=1, diff-last=true, allow-equal-pre=true)_change-output</mutOpConfig>
+    <mutationDuration>524893</mutationDuration>
+    <mutationDurations>34469,24809,37334,30807,22893,24139,31209,33541,23540,24251,28606,40366,21978,27762,26336,17343,16972,21824,36714</mutationDurations>
+    <nrCorrectRuns>18</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>1433,1293,1534,1527,1590,1419,1580,1120,2005,1275,1621,1329,1387,1109,1711,1084,1172,1224,1230</resetsEq>
+    <resetsEqSum>26643</resetsEqSum>
+    <resetsMq>11525,8641,11522,7920,7915,7202,8647,7921,9365,7924,8647,9362,9362,8645,7919,8645,7922,9364,11318</resetsMq>
+    <resetsMqSum>169766</resetsMqSum>
+    <sampleConfig>reduce-to-min(kind=split-state-state)*element-based(fraction=1/(2^1.000000),kind=operator:split-state-1)</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>16585307</selectionDuration>
+    <selectionDurations>1086369,770498,1166048,925239,693325,751376,882709,916758,744338,739280,870498,1074883,900729,968101,808983,731429,710241,758902,1085601</selectionDurations>
+    <shortMutOpConfig>split-state_1_change-output</shortMutOpConfig>
+    <stepsEq>64025,61579,69438,74055,72962,67774,73052,54378,88677,61773,75878,63819,65575,51969,82291,51457,56446,57242,56332</stepsEq>
+    <stepsEqSum>1248722</stepsEqSum>
+    <stepsMq>153984,119478,146755,103603,117940,110686,131249,121577,142606,112986,147053,137406,150737,137689,130899,131874,109369,134067,227460</stepsMq>
+    <stepsMqSum>2567418</stepsMqSum>
+    <testSelectionSuite>200000</testSelectionSuite>
+    <testSuiteSize>1000</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:60, restart-prob:0.950000, stop-prob:0.050000, rand-word:6)</traceGenConfig>
+</eval-statistics>

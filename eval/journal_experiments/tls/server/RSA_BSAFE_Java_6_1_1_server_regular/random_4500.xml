@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.RSA_BSAFE_Java_6_1_1_server_regular</experimentName>
+    <generationDuration>607</generationDuration>
+    <generationDurations>145,170,155,137</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>0</mutationDuration>
+    <mutationDurations>0,0,0,0</mutationDurations>
+    <nrCorrectRuns>3</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>5164,6131,5259,8200</resetsEq>
+    <resetsEqSum>24754</resetsEqSum>
+    <resetsMq>198,248,199,167</resetsMq>
+    <resetsMqSum>812</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>55</selectionDuration>
+    <selectionDurations>12,18,13,12</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>103544,123063,105913,163658</stepsEq>
+    <stepsEqSum>496178</stepsEqSum>
+    <stepsMq>697,883,697,512</stepsMq>
+    <stepsMqSum>2789</stepsMqSum>
+    <testSelectionSuite>100000</testSelectionSuite>
+    <testSuiteSize>4500</testSuiteSize>
+    <traceGenConfig>rand-word(len=40)</traceGenConfig>
+</eval-statistics>

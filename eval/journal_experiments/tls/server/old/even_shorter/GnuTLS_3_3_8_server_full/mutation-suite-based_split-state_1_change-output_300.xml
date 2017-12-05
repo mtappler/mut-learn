@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.even_shorter.GnuTLS_3_3_8_server_full</experimentName>
+    <generationDuration>18043</generationDuration>
+    <generationDurations>6535,6384,5124</generationDurations>
+    <mutOpConfig>split-state(acc-seq=300, depth=1, diff-last=true, allow-equal-pre=true)_change-output</mutOpConfig>
+    <mutationDuration>137</mutationDuration>
+    <mutationDurations>51,47,39</mutationDurations>
+    <nrCorrectRuns>2</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>350,346,345</resetsEq>
+    <resetsEqSum>1041</resetsEqSum>
+    <resetsMq>1785,1788,1340</resetsMq>
+    <resetsMqSum>4913</resetsMqSum>
+    <sampleConfig>reduce-to-mean(kind=split-state-state)*element-based(fraction=1/(2^1.000000),kind=operator:split-state-1)</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>43217</selectionDuration>
+    <selectionDurations>14989,14807,13421</selectionDurations>
+    <shortMutOpConfig>split-state_1_change-output</shortMutOpConfig>
+    <stepsEq>3315,3300,3299</stepsEq>
+    <stepsEqSum>9914</stepsEqSum>
+    <stepsMq>9057,9252,6451</stepsMq>
+    <stepsMqSum>24760</stepsMqSum>
+    <testSelectionSuite>300000</testSelectionSuite>
+    <testSuiteSize>300</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:10, restart-prob:0.950000, stop-prob:0.050000, rand-word:3)</traceGenConfig>
+</eval-statistics>

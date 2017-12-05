@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tls.server.OpenSSL_1_0_2_server_regular</experimentName>
+    <generationDuration>230762</generationDuration>
+    <generationDurations>13077,12695,8439,11289,9783,10804,10987,11888,11877,9791,10528,8225,10021,10752,11417,13597,8559,8624,9303,11079,9518,8509</generationDurations>
+    <mutOpConfig>split-state(acc-seq=300, depth=1, diff-last=true, allow-equal-pre=true)_change-output</mutOpConfig>
+    <mutationDuration>357</mutationDuration>
+    <mutationDurations>22,23,4,8,11,22,14,15,16,6,39,13,17,22,29,19,16,11,14,8,17,11</mutationDurations>
+    <nrCorrectRuns>21</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>124,118,113,122,117,112,113,115,112,114,170,119,116,123,112,115,113,111,104,117,119,117</resetsEq>
+    <resetsEqSum>2596</resetsEqSum>
+    <resetsMq>306,307,204,256,256,256,255,255,255,203,256,204,254,257,256,307,204,202,203,256,205,176</resetsMq>
+    <resetsMqSum>5333</resetsMqSum>
+    <sampleConfig>reduce-to-mean(kind=split-state-state)*element-based(fraction=1/(2^1.000000),kind=operator:split-state-1)</sampleConfig>
+    <selectionConfig>mutation-suite-based</selectionConfig>
+    <selectionDuration>248468</selectionDuration>
+    <selectionDurations>14202,12882,9094,11296,10977,12050,10393,10765,12219,10279,10663,8470,11588,11734,16297,17883,8910,9837,10398,9507,9255,9769</selectionDurations>
+    <shortMutOpConfig>split-state_1_change-output</shortMutOpConfig>
+    <stepsEq>1628,1511,1547,1649,1565,1556,1468,1461,1454,1558,2207,1688,1522,1592,1413,1590,1443,1463,1328,1534,1655,1700</stepsEq>
+    <stepsEqSum>34532</stepsEqSum>
+    <stepsMq>1214,1170,744,880,988,881,882,932,929,741,883,744,925,1037,933,1269,849,739,742,986,848,614</stepsMq>
+    <stepsMqSum>19930</stepsMqSum>
+    <testSelectionSuite>300000</testSelectionSuite>
+    <testSuiteSize>100</testSuiteSize>
+    <traceGenConfig>mu-directed-iterative(max-len:20, restart-prob:0.950000, stop-prob:0.050000, rand-word:3)</traceGenConfig>
+</eval-statistics>

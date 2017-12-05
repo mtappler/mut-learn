@@ -24,41 +24,46 @@ import net.automatalib.automata.transout.MealyMachine;
 import net.automatalib.words.impl.Symbol;
 
 /**
- * A single mutant in our implementation with some additional information
- * such as the critical transtion (@see at.tugraz.mutation_equiv.mutation.CriticalTransition). 
+ * A single mutant in our implementation with some additional information such
+ * as the critical transtion (@see
+ * at.tugraz.mutation_equiv.mutation.CriticalTransition).
  * 
- * Beside that it is used to lazily create mutants. This makes sense if large number of mutants
- * is created such that sampling is necessary. In these cases you would not want to eagerly
- * create all mutants and sample afterwards, but rather sample and then create mutants.
+ * Beside that it is used to lazily create mutants. This makes sense if large
+ * number of mutants is created such that sampling is necessary. In these cases
+ * you would not want to eagerly create all mutants and sample afterwards, but
+ * rather sample and then create mutants.
  * 
- * However, the critical transition contains a lot of information such that creation is
- * generally not necessary anyway.
+ * However, the critical transition contains a lot of information such that
+ * creation is generally not necessary anyway.
  * 
  * @author Martin Tappler
  *
  */
-public class MutantProducer implements Supplier<MealyMachine<Object,Symbol,?,String>>{
+public class MutantProducer implements Supplier<MealyMachine<Object, Symbol, ?, String>> {
 	private int id;
-	private Supplier<MealyMachine<Object,Symbol,?,String>> actualSupplier = null;
+	private Supplier<MealyMachine<Object, Symbol, ?, String>> actualSupplier = null;
 	private CriticalTransition critTrans = null;
-	private MealyMachine<Object,Symbol,?,String> memoized = null;
-	private boolean dontMemoize = false; // to avoid instantiation if that would require too much memory
+	private MealyMachine<Object, Symbol, ?, String> memoized = null;
+	private boolean dontMemoize = false; // to avoid instantiation if that would
+											// require too much memory
+
 	@Override
-	public MealyMachine<Object, Symbol, ?, String> get() {
-		if(!dontMemoize && memoized == null){
+	public MealyMachine<Object, Symbol, Object, String> get() {
+		if (!dontMemoize && memoized == null) {
 			memoized = actualSupplier.get();
-			return memoized;
-		}
-		else {
-			return actualSupplier.get();
+			return (MealyMachine<Object, Symbol, Object, String>) memoized;
+		} else {
+			return (MealyMachine<Object, Symbol, Object, String>) actualSupplier.get();
 		}
 	}
-	public void create(){
-		if(!dontMemoize && memoized == null){
+
+	public void create() {
+		if (!dontMemoize && memoized == null) {
 			memoized = actualSupplier.get();
-		} 
+		}
 	}
-	public MutantProducer(int id,CriticalTransition critTrans, 
+
+	public MutantProducer(int id, CriticalTransition critTrans,
 			Supplier<MealyMachine<Object, Symbol, ?, String>> actualSupplier, boolean dontMemoize) {
 		super();
 		this.id = id;
@@ -66,23 +71,26 @@ public class MutantProducer implements Supplier<MealyMachine<Object,Symbol,?,Str
 		this.critTrans = critTrans;
 		this.dontMemoize = dontMemoize;
 	}
-		
-	public MutantProducer(int id,CriticalTransition critTrans, 
+
+	public MutantProducer(int id, CriticalTransition critTrans,
 			Supplier<MealyMachine<Object, Symbol, ?, String>> actualSupplier) {
-		this(id,critTrans,actualSupplier,false);
+		this(id, critTrans, actualSupplier, false);
 	}
+
 	public CriticalTransition getCritTrans() {
 		return critTrans;
 	}
+
 	public void setCritTrans(CriticalTransition critTrans) {
 		this.critTrans = critTrans;
 	}
+
 	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
-
 
 }

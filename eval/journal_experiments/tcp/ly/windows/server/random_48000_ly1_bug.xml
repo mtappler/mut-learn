@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eval-statistics>
+    <experimentName>tcp.ly.windows.server</experimentName>
+    <generationDuration>19902</generationDuration>
+    <generationDurations>4267,5161,5305,5169</generationDurations>
+    <mutOpConfig>none</mutOpConfig>
+    <mutationDuration>1</mutationDuration>
+    <mutationDurations>1,0,0,0</mutationDurations>
+    <nrCorrectRuns>3</nrCorrectRuns>
+    <nrRuns>50</nrRuns>
+    <resetsEq>66193,53854,97012,62367</resetsEq>
+    <resetsEqSum>279426</resetsEqSum>
+    <resetsMq>4975,6462,6954,6123</resetsMq>
+    <resetsMqSum>24514</resetsMqSum>
+    <sampleConfig>identity</sampleConfig>
+    <selectionConfig>random</selectionConfig>
+    <selectionDuration>112</selectionDuration>
+    <selectionDurations>24,30,28,30</selectionDurations>
+    <shortMutOpConfig>none</shortMutOpConfig>
+    <stepsEq>478513,391018,708478,436630</stepsEq>
+    <stepsEqSum>2014639</stepsEqSum>
+    <stepsMq>52924,56672,60134,55472</stepsMq>
+    <stepsMqSum>225202</stepsMqSum>
+    <testSelectionSuite>60000</testSelectionSuite>
+    <testSuiteSize>48000</testSuiteSize>
+    <traceGenConfig>adapted-lee-yannakakis(exp-len=1,prefix-strategy=buggy)</traceGenConfig>
+</eval-statistics>
